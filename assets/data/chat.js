@@ -2,7 +2,7 @@
    Read-only on the site. Logging in sends people to the sandbox bot.
    Text tokens like :ram_cry: become custom emoji. s: = sticker (assets/img/st-XX.webp). r: = reactions. */
 window.RAMCHAT = {
-  LOGIN_URL: "https://janitorai.com/",   // TODO: put the Horny U Sandbox bot link here
+  LOGIN_URL: "https://janitorai.com/characters/777692ea-823a-4fc0-8e92-f9bdc019c92c_character-hornell-university-rpg-climb-the-horn-list-or-get-barbed-trying",
   emoji: {ram_lol:"em-17", ram_cry:"em-18", ram_mad:"em-19", ram_blush:"em-20", horns:"em-06", goat:"em-04", goat_side:"em-03",
           bleat:"em-07", G:"em-08", candle:"em-09", devil_coffee:"em-10", climax:"em-11", horns_heart:"em-12", pearls:"em-13",
           cat:"em-14", unfiltered:"em-15", fleece:"em-16", H:"em-01", torch:"em-02", ram:"em-05"},
