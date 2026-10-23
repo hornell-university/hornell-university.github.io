@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Chi Alpha Delta · Alpha Chapter</title>
+<meta name="description" content="Chi Alpha Delta at Hornell University. Est. 1872. Stay CHAD.">
+<link rel="icon" href="assets/img/gr-01_chad-banner.webp">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display+SC:wght@700&family=EB+Garamond:ital,wght@0,400;0,600;1,400&display=swap">
+<style>
+.wb{position:sticky;top:0;z-index:999;display:flex;align-items:center;gap:8px;height:42px;padding:0 max(10px,env(safe-area-inset-left,0px)) 0 max(10px,env(safe-area-inset-left,0px));
+ background:#dfe1e5;border-bottom:1px solid #c4c7cc;font:500 13px/1 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;color:#3c4043}
+.wb a,.wb button{color:inherit;text-decoration:none}
+.wb .nav{display:flex;gap:2px}
+.wb .nav a,.wb .nav button{display:inline-flex;align-items:center;justify-content:center;width:30px;height:30px;border-radius:50%;border:0;background:transparent;cursor:pointer;font-size:16px}
+.wb .nav a:hover,.wb .nav button:hover{background:#c8cbd0}
+.wb .url{flex:1;min-width:0;display:flex;align-items:center;gap:7px;height:30px;padding:0 12px;border-radius:15px;background:#fff;white-space:nowrap;overflow:hidden}
+.wb .url .lock{font-size:11px;color:#5f6368}
+.wb .url b{font-weight:600;color:#202124}
+.wb .url span{color:#80868b;overflow:hidden;text-overflow:ellipsis}
+.wb .tabs{display:flex;gap:6px}
+.wb .tabs a{display:inline-flex;align-items:center;gap:6px;height:30px;padding:0 10px;border-radius:15px;background:#eef0f2;font-weight:600;font-size:12px;white-space:nowrap}
+.wb .tabs a:hover{background:#fff}
+.wb .tabs img{width:16px;height:16px;border-radius:3px}
+@media (max-width:620px){.wb .fwd,.wb .tabs .lbl{display:none}.wb .tabs a{padding:0 8px}}
+
+
+*{box-sizing:border-box}
+body{margin:0;background:#f7f5ef;color:#14213d;font:18px/1.65 "EB Garamond",Georgia,serif}
+a{color:#14213d}
+img{display:block;max-width:100%}
+.in{max-width:1000px;margin:0 auto;padding:0 20px}
+.top{background:#14213d;color:#d4af37;text-align:center;font:600 12px/1 "EB Garamond",Georgia,serif;letter-spacing:.3em;padding:10px;text-transform:uppercase}
+.hd{text-align:center;padding:50px 0 34px;border-bottom:1px solid #d9d2bf}
+.hd img{width:120px;margin:0 auto 16px}
+.hd h1{font:700 clamp(40px,7vw,70px)/1 "Playfair Display SC",Georgia,serif;margin:0;letter-spacing:.06em}
+.hd .gk{font:700 28px/1 "Playfair Display SC",Georgia,serif;color:#d4af37;letter-spacing:.3em;margin-top:8px}
+.hd p{font-style:italic;color:#5a6378;margin:12px 0 0}
+section{padding:54px 0;border-bottom:1px solid #e3ddcc}
+h2{font:700 30px/1 "Playfair Display SC",Georgia,serif;letter-spacing:.08em;text-align:center;margin:0 0 26px}
+.pillars{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;text-align:center}
+@media (max-width:760px){.pillars{grid-template-columns:1fr}}
+.pillars div{border-top:3px solid #d4af37;padding-top:16px}
+.pillars b{font:700 20px/1.2 "Playfair Display SC",Georgia,serif;letter-spacing:.08em;display:block;margin-bottom:6px}
+.pillars p{margin:0;color:#4a5468;font-size:16px}
+.alumni{columns:2;column-gap:40px;font-size:17px}
+@media (max-width:640px){.alumni{columns:1}}
+.alumni p{margin:0 0 10px;break-inside:avoid}
+.ev{display:grid;grid-template-columns:minmax(0,1fr) 260px;gap:30px;align-items:center}
+@media (max-width:760px){.ev{grid-template-columns:1fr}}
+.ev .w{background:#fff;border:1px solid #e3ddcc;padding:24px;text-align:center}
+.ev .w b{font:700 26px/1.1 "Playfair Display SC",Georgia,serif;display:block}
+.ev .w i{color:#8a7a50}
+.rush{background:#14213d;color:#f7f5ef;text-align:center}
+.rush h2{color:#d4af37}
+.rush form{display:flex;flex-direction:column;gap:12px;max-width:440px;margin:0 auto;text-align:left;font-size:16px}
+.rush label{display:flex;gap:10px;align-items:center}
+.rush select,.rush input[type=text]{flex:1;font:16px "EB Garamond",Georgia,serif;padding:8px;border:1px solid #d4af37;background:#0f1a31;color:#f7f5ef}
+.rush button{background:#d4af37;color:#14213d;border:0;padding:14px;font:700 15px "EB Garamond",Georgia,serif;letter-spacing:.2em;text-transform:uppercase;cursor:pointer}
+.rush .r{min-height:1.6em;color:#d4af37;font-style:italic;text-align:center}
+.ft{text-align:center;font-size:13px;color:#7a7f8c;padding:30px 16px 50px}
+</style>
+</head>
+<body>
+<div class="wb" role="navigation" aria-label="Browser"><div class="nav"><button type="button" onclick="history.length>1?history.back():location.href='web.html'" aria-label="Back">←</button><button type="button" class="fwd" onclick="history.forward()" aria-label="Forward">→</button><a href="chad.html" aria-label="Reload">↻</a></div><div class="url"><span class="lock">🔒</span><b>staychad.org</b><span>/brotherhood</span></div><div class="tabs"><a href="web.html"><span aria-hidden="true">🔎</span><span class="lbl">Ramble</span></a><a href="index.html"><img src="assets/img/hu-01_seal_paper.webp" alt=""><span class="lbl">hornell.edu</span></a></div></div>
+<div class="top">Brotherhood · Scholarship · Legacy · Since 1872</div>
+<header class="hd"><div class="in"><img src="assets/img/gr-01_chad-banner.webp" alt="Chi Alpha Delta banner"><h1>Chi Alpha Delta</h1><div class="gk">ΧΑΔ</div><p>The first fraternity on East Hill. The house at the top of the Row.</p></div></header>
+<section><div class="in"><h2>Our pillars</h2><div class="pillars"><div><b>Brotherhood</b><p>One hundred fifty-four years of men who answer the phone when a brother calls.</p></div>
+<div><b>Scholarship</b><p>A house GPA we are not legally required to publish.</p></div><div><b>Legacy</b><p>Most of the Board of Trustees. A governor. Two senators. Your father, possibly.</p></div></div></div></section>
+<section><div class="in"><h2>Stay CHAD</h2><p style="text-align:center;max-width:60ch;margin:0 auto 20px">In the 1990s the brotherhood stopped fighting the name. The flag reads ΧΑΔ. The shirts read STAY CHAD. We say it with a straight face, and we expect you to as well.</p>
+<p style="text-align:center;font-style:italic;color:#5a6378">Our president is named Chad. He does not find this funny. Please do not bring it up.</p></div></section>
+<section><div class="in ev"><div><h2 style="text-align:left">The calendar</h2><p><b>The White Party</b>, September. All white, invitation only.<br><b>Black Tie Blackout</b>, January.<br><b>The Vault</b>, most Fridays. Phones go in the basket at the top of the stairs. This is not a request.</p></div>
+<div class="w"><b>The Vault</b><i>Our basement, our rules.</i><p style="margin:10px 0 0;font-size:15px">Guests by invitation of a brother or a Beta Rho sister. Freshmen do not get in. Top 10 of a certain list may be admitted at the discretion of the door.</p></div></div></section>
+<section class="rush"><div class="in"><h2>Rush</h2><form onsubmit="document.getElementById('rr').textContent='Thank you. A brother will be in touch. (A brother will not be in touch.)';return false">
+<label>Name <input type="text" aria-label="Name"></label>
+<label>Legacy? <select aria-label="Legacy"><option>Yes, my father</option><option>Yes, my grandfather</option><option>Yes, both</option><option>No</option></select></label>
+<label>Summer home <select aria-label="Summer home"><option>The Hamptons</option><option>Nantucket</option><option>Keuka Lake</option><option>I work in the summer</option></select></label>
+<button type="submit">Submit to the brotherhood</button><p class="r" id="rr"></p></form></div></section>
+<p class="ft">Chi Alpha Delta, Alpha Chapter · Greek Row, Hornell University · Paired with Beta Rho Alpha Tau · <a href="web.html">Ramble</a></p>
+</body>
+</html>

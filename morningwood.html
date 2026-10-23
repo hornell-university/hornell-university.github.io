@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Morning Wood Café · Rise and grind</title>
+<meta name="description" content="Morning Wood Café, Main Street, Hornell. Rise and grind.">
+<link rel="icon" href="assets/img/tw-01_morning-wood.webp">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,800&family=DM+Sans:wght@400;500;700&display=swap">
+<style>
+.wb{position:sticky;top:0;z-index:999;display:flex;align-items:center;gap:8px;height:42px;padding:0 max(10px,env(safe-area-inset-left,0px)) 0 max(10px,env(safe-area-inset-left,0px));
+ background:#dfe1e5;border-bottom:1px solid #c4c7cc;font:500 13px/1 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;color:#3c4043}
+.wb a,.wb button{color:inherit;text-decoration:none}
+.wb .nav{display:flex;gap:2px}
+.wb .nav a,.wb .nav button{display:inline-flex;align-items:center;justify-content:center;width:30px;height:30px;border-radius:50%;border:0;background:transparent;cursor:pointer;font-size:16px}
+.wb .nav a:hover,.wb .nav button:hover{background:#c8cbd0}
+.wb .url{flex:1;min-width:0;display:flex;align-items:center;gap:7px;height:30px;padding:0 12px;border-radius:15px;background:#fff;white-space:nowrap;overflow:hidden}
+.wb .url .lock{font-size:11px;color:#5f6368}
+.wb .url b{font-weight:600;color:#202124}
+.wb .url span{color:#80868b;overflow:hidden;text-overflow:ellipsis}
+.wb .tabs{display:flex;gap:6px}
+.wb .tabs a{display:inline-flex;align-items:center;gap:6px;height:30px;padding:0 10px;border-radius:15px;background:#eef0f2;font-weight:600;font-size:12px;white-space:nowrap}
+.wb .tabs a:hover{background:#fff}
+.wb .tabs img{width:16px;height:16px;border-radius:3px}
+@media (max-width:620px){.wb .fwd,.wb .tabs .lbl{display:none}.wb .tabs a{padding:0 8px}}
+
+
+*{box-sizing:border-box}
+body{margin:0;background:#f5efe6;color:#2b2119;font:16px/1.65 "DM Sans",system-ui,sans-serif}
+a{color:#b4432b}
+img{display:block;max-width:100%}
+.in{max-width:1080px;margin:0 auto;padding:0 20px}
+.hd .in{display:flex;align-items:center;justify-content:space-between;padding-top:18px;padding-bottom:18px}
+.hd b{font:800 22px/1 Fraunces,Georgia,serif;letter-spacing:-.01em}
+.hd nav{display:flex;gap:22px;font-weight:500;font-size:14px}
+.hd nav a{color:#2b2119;text-decoration:none}
+@media (max-width:600px){.hd nav{display:none}}
+.hero{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:40px;align-items:center;padding:30px 0 60px}
+@media (max-width:820px){.hero{grid-template-columns:1fr}}
+.hero h1{font:800 clamp(44px,7vw,84px)/.95 Fraunces,Georgia,serif;letter-spacing:-.03em;margin:0}
+.hero h1 i{font-style:italic;font-weight:400;color:#b4432b}
+.hero p{font-size:19px;color:#5a4a3c;max-width:42ch;margin:20px 0 0}
+.hero .logo{background:#ece1cf;border-radius:50%;aspect-ratio:1;display:grid;place-items:center;padding:12%;max-width:420px;justify-self:center;box-shadow:inset 0 0 0 10px #f5efe6,inset 0 0 0 12px #d8c7ad}
+.hours{display:flex;gap:18px;flex-wrap:wrap;margin-top:22px;font-weight:700;font-size:14px}
+.hours span{background:#fff;border:1px solid #e3d6c3;border-radius:999px;padding:8px 14px}
+section{padding:60px 0;border-top:1px solid #e3d6c3}
+h2{font:800 40px/1.05 Fraunces,Georgia,serif;letter-spacing:-.02em;margin:0 0 24px}
+.drinks{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:14px}
+.dr{background:#fff;border-radius:18px;padding:18px 20px;border:1px solid #ece2d3}
+.dr b{font:600 21px/1.2 Fraunces,Georgia,serif;display:flex;justify-content:space-between;gap:10px}
+.dr b span{color:#b4432b}
+.dr p{margin:6px 0 0;color:#6a5a4b;font-size:14.5px}
+.food{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:8px 28px}
+.food div{display:flex;justify-content:space-between;border-bottom:1px dotted #cbb89c;padding:8px 0}
+.luc{display:grid;grid-template-columns:200px minmax(0,1fr);gap:30px;align-items:center}
+@media (max-width:700px){.luc{grid-template-columns:1fr}}
+.luc .pic{aspect-ratio:1;border-radius:50%;background:radial-gradient(circle at 50% 40%,#f9d9c4,#e7a98a 60%,#b4432b);display:grid;place-items:center;font:800 64px Fraunces,Georgia,serif;color:#fff}
+.luc blockquote{margin:0;font:400 26px/1.35 Fraunces,Georgia,serif;font-style:italic}
+.luc cite{display:block;margin-top:12px;font:700 14px "DM Sans",system-ui,sans-serif;font-style:normal;color:#8a7764}
+.wall{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:12px}
+.frame{background:#fff;border:8px solid #6b4a32;padding:14px;box-shadow:0 6px 14px rgba(0,0,0,.15);font-size:14px}
+.frame.miss{border-style:dashed;border-color:#b4432b;color:#b4432b;font-weight:700}
+.ft{text-align:center;color:#8a7764;font-size:13px;padding:30px 16px 50px;border-top:1px solid #e3d6c3}
+</style>
+</head>
+<body>
+<div class="wb" role="navigation" aria-label="Browser"><div class="nav"><button type="button" onclick="history.length>1?history.back():location.href='web.html'" aria-label="Back">←</button><button type="button" class="fwd" onclick="history.forward()" aria-label="Forward">→</button><a href="morningwood.html" aria-label="Reload">↻</a></div><div class="url"><span class="lock">🔒</span><b>morningwood.cafe</b><span>/</span></div><div class="tabs"><a href="web.html"><span aria-hidden="true">🔎</span><span class="lbl">Ramble</span></a><a href="index.html"><img src="assets/img/hu-01_seal_paper.webp" alt=""><span class="lbl">hornell.edu</span></a></div></div>
+
+<header class="hd"><div class="in"><b>Morning Wood</b><nav><a href="#menu">Menu</a><a href="#luc">Our story</a><a href="#signs">The wall</a></nav></div></header>
+<main class="in"><div class="hero"><div><h1>Rise and <i>grind.</i></h1><p>An independent coffee house on Main Street. Reclaimed barn wood, mismatched armchairs, oat milk in everything, and an outlet at every table.</p>
+<div class="hours"><span>Mon–Fri 6:30a–11p</span><span>Sat–Sun 8a–11p</span><span>Kiosk in the Union</span></div></div>
+<div class="logo"><img src="assets/img/tw-01_morning-wood.webp" alt="Morning Wood logo: a sunrise behind a birch log"></div></div></main>
+<section id="menu"><div class="in"><h2>Coffee</h2><div class="drinks"><div class="dr"><b>The Morning Wood<span>5.25</span></b><p>Double shot, oat milk, a whisper of maple. Our signature. Please order it out loud.</p></div><div class="dr"><b>Rise &amp; Grind<span>4.75</span></b><p>Cold brew steeped 20 hours. Wakes you up the first time.</p></div><div class="dr"><b>The Long Johnson<span>5.50</span></b><p>A very long pour-over. Two cups&#x27; worth. For the Long Johnsons commute.</p></div><div class="dr"><b>Barn Wood Latte<span>5.50</span></b><p>Cinnamon, brown sugar, oat milk. It&#x27;s about the barn wood.</p></div><div class="dr"><b>Hump Day Mocha<span>5.75</span></b><p>Seasonal. Wednesdays and the last day of classes.</p></div><div class="dr"><b>Dead Week Drip<span>2.50</span></b><p>Bottomless during finals with a Hornell ID. Luc&#x27;s gift to you.</p></div></div><h2 style="margin-top:40px">To eat</h2><div class="food"><div><span>Maple scone</span><b>3.75</b></div><div><span>Everything bagel, cream cheese</span><b>4.25</b></div><div><span>Avocado toast, chili crisp</span><b>8.50</b></div><div><span>The Union kiosk muffin</span><b>we&#x27;re sorry</b></div></div></div></section>
+<section id="luc"><div class="in luc"><div class="pic" aria-hidden="true">L</div><div><blockquote>“The name refers to the barn wood. And the log in the logo. It is a log. Look at it. That's all it is.”</blockquote><cite>Luc, owner, every single day since 2017</cite></div></div></section>
+<section id="signs"><div class="in"><h2>The wall of stolen signs</h2><p style="margin:-10px 0 20px;color:#6a5a4b">Our sign gets stolen every Hump Day. We frame the ones that come back.</p><div class="wall"><div class="frame">2017 — taken Hump Day, found on the CHAD roof</div><div class="frame">2018 — taken Hump Day, never found</div><div class="frame">2019 — returned by mail from Climax, PA, with a note</div><div class="frame">2021 — found hanging in the Lynx Den</div><div class="frame">2023 — taken by “persons unknown,” returned by a very apologetic SIMP pledge</div><div class="frame miss">2026 — currently missing. It isn&#x27;t even Hump Day.</div></div></div></section>
+<p class="ft">Morning Wood Café · Main Street, Hornell · the default first date, the default gentle breakup · <a href="web.html">Ramble</a></p>
+</body>
+</html>

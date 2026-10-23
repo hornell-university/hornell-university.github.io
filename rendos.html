@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Rendo&#x27;s</title>
+<meta name="description" content="Rendo&#x27;s champagne lounge, the Roundhouse, Hornell.">
+<link rel="icon" href="assets/img/hu-01_seal_paper.webp">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Italiana&family=Jost:wght@300;400;500&display=swap">
+<style>
+.wb{position:sticky;top:0;z-index:999;display:flex;align-items:center;gap:8px;height:42px;padding:0 max(10px,env(safe-area-inset-left,0px)) 0 max(10px,env(safe-area-inset-left,0px));
+ background:#dfe1e5;border-bottom:1px solid #c4c7cc;font:500 13px/1 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;color:#3c4043}
+.wb a,.wb button{color:inherit;text-decoration:none}
+.wb .nav{display:flex;gap:2px}
+.wb .nav a,.wb .nav button{display:inline-flex;align-items:center;justify-content:center;width:30px;height:30px;border-radius:50%;border:0;background:transparent;cursor:pointer;font-size:16px}
+.wb .nav a:hover,.wb .nav button:hover{background:#c8cbd0}
+.wb .url{flex:1;min-width:0;display:flex;align-items:center;gap:7px;height:30px;padding:0 12px;border-radius:15px;background:#fff;white-space:nowrap;overflow:hidden}
+.wb .url .lock{font-size:11px;color:#5f6368}
+.wb .url b{font-weight:600;color:#202124}
+.wb .url span{color:#80868b;overflow:hidden;text-overflow:ellipsis}
+.wb .tabs{display:flex;gap:6px}
+.wb .tabs a{display:inline-flex;align-items:center;gap:6px;height:30px;padding:0 10px;border-radius:15px;background:#eef0f2;font-weight:600;font-size:12px;white-space:nowrap}
+.wb .tabs a:hover{background:#fff}
+.wb .tabs img{width:16px;height:16px;border-radius:3px}
+@media (max-width:620px){.wb .fwd,.wb .tabs .lbl{display:none}.wb .tabs a{padding:0 8px}}
+
+
+*{box-sizing:border-box}
+body{margin:0;background:#0b0a09;color:#e9e1d3;font:300 16px/1.75 Jost,system-ui,sans-serif;letter-spacing:.01em}
+a{color:#d9b56a}
+.in{max-width:980px;margin:0 auto;padding:0 22px}
+.hd{text-align:center;padding:70px 0 40px;border-bottom:1px solid #2a241c;background:radial-gradient(ellipse at 50% 0%,#2a2115 0%,transparent 60%)}
+.hd .mono{width:70px;height:70px;margin:0 auto 22px;border:1px solid #d9b56a;border-radius:50%;display:grid;place-items:center;font:400 30px/1 Italiana,serif;color:#d9b56a}
+.hd h1{font:400 clamp(54px,10vw,110px)/1 Italiana,serif;letter-spacing:.12em;margin:0;color:#f3ead9}
+.hd p{margin:10px 0 0;font-size:12px;letter-spacing:.42em;text-transform:uppercase;color:#a99a80}
+section{padding:60px 0;border-bottom:1px solid #1d1913}
+h2{font:400 34px/1.1 Italiana,serif;letter-spacing:.1em;text-transform:uppercase;margin:0 0 26px;color:#d9b56a;text-align:center}
+.lede{max-width:56ch;margin:0 auto;text-align:center;color:#cfc4b2;font-size:18px}
+.lede em{font-style:normal;color:#f3ead9}
+table{width:100%;border-collapse:collapse}
+td{padding:16px 6px;border-bottom:1px solid #221d16;vertical-align:baseline}
+td b{font:400 24px/1.2 Italiana,serif;letter-spacing:.04em;color:#f3ead9;display:block}
+td small{color:#8f826d;font-size:13px}
+td.p{text-align:right;color:#d9b56a;white-space:nowrap;font-size:15px}
+.booth{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:40px;align-items:center}
+@media (max-width:760px){.booth{grid-template-columns:1fr}}
+.seat{aspect-ratio:4/3;border:1px solid #3a3126;background:radial-gradient(ellipse at 50% 60%,#f3ead9 0 18%,transparent 19%),radial-gradient(circle at 50% 40%,#2a2218,#0b0a09 70%);position:relative}
+.seat::after{content:"RESERVED";position:absolute;left:50%;top:58%;transform:translate(-50%,-50%);font:400 13px/1 Jost,system-ui,sans-serif;letter-spacing:.4em;color:#0b0a09}
+.booth h3{font:400 30px/1.1 Italiana,serif;letter-spacing:.06em;margin:0 0 12px;color:#f3ead9}
+.booth p{color:#cfc4b2;margin:0 0 12px}
+.rules{list-style:none;padding:0;margin:0 auto;max-width:640px}
+.rules li{padding:14px 0;border-bottom:1px solid #221d16;text-align:center;color:#cfc4b2}
+.res{text-align:center}
+.res button{background:none;border:1px solid #d9b56a;color:#d9b56a;font:400 13px/1 Jost,system-ui,sans-serif;letter-spacing:.3em;text-transform:uppercase;padding:18px 28px;cursor:pointer}
+.res p{min-height:1.7em;color:#a99a80;margin-top:14px}
+.ft{text-align:center;font-size:11px;letter-spacing:.3em;text-transform:uppercase;color:#6d6252;padding:36px 16px 60px}
+</style>
+</head>
+<body>
+<div class="wb" role="navigation" aria-label="Browser"><div class="nav"><button type="button" onclick="history.length>1?history.back():location.href='web.html'" aria-label="Back">←</button><button type="button" class="fwd" onclick="history.forward()" aria-label="Forward">→</button><a href="rendos.html" aria-label="Reload">↻</a></div><div class="url"><span class="lock">🔒</span><b>rendos.bar</b><span>/</span></div><div class="tabs"><a href="web.html"><span aria-hidden="true">🔎</span><span class="lbl">Ramble</span></a><a href="index.html"><img src="assets/img/hu-01_seal_paper.webp" alt=""><span class="lbl">hornell.edu</span></a></div></div>
+
+<header class="hd"><div class="mono">R</div><h1>RENDO'S</h1><p>Champagne · The Roundhouse · Hornell</p></header>
+<section><div class="in"><p class="lede">Opened by a former resident of the Roundhouse so that <em>the worst women in Hornell</em> would have somewhere decent to be awful. White leather, low gold light, a wall of chilled white bottles, and nothing faster than a slow song.</p></div></section>
+<section><div class="in"><h2>The list</h2><table><tr><td></td><td class="p"><small>glass</small></td><td class="p"><small>bottle</small></td></tr><tr><td><b>Maison Blanc</b><small>Brut, white label</small></td><td class="p">$18 / glass</td><td class="p">$90</td></tr><tr><td><b>Roundhouse Rosé</b><small>Our house pour</small></td><td class="p">$22 / glass</td><td class="p">$110</td></tr><tr><td><b>Cuvée Rivale</b><small>Served only at the Rival&#x27;s Booth</small></td><td class="p">on her</td><td class="p">—</td></tr><tr><td><b>Grande Réserve 2012</b><small>For when she&#x27;s won</small></td><td class="p">—</td><td class="p">$240</td></tr><tr><td><b>The White Bottle</b><small>Ask. Then don&#x27;t.</small></td><td class="p">—</td><td class="p">$400</td></tr></table></div></section>
+<section><div class="in booth"><div class="seat" aria-hidden="true"></div><div><h3>The Rival's Booth</h3>
+<p>The corner table. Sit in it, and whoever owns the room tonight will come over and take you apart, slowly and in front of everyone.</p>
+<p>Stay in your seat until she's finished, and she buys you a glass of the Cuvée Rivale.</p><p style="color:#d9b56a">This is called getting Rendo'd. Gentlemen come specifically to lose.</p></div></div></section>
+<section><div class="in"><h2>The house</h2><ul class="rules"><li>21 and over. The doorman cards everyone. Yes, even her.</li><li>Dress code: dark, pressed, quiet. No team colors. No letters. No hoodies, including that one.</li><li>Phones face down on the table. What happens at Rendo&#x27;s ends up on Bleat anyway, but not from you.</li><li>The DJ only plays slow songs. Requests are not taken. Requests are noted.</li></ul></div></section>
+<section class="res"><div class="in"><h2>Reservations</h2><button type="button" id="rb">Request a table</button><p id="rr"></p></div></section>
+<p class="ft">Rendo's · ground floor, the Roundhouse Lofts · Thursday to Saturday, nine until late · <a href="web.html">Ramble</a></p>
+<script>document.getElementById('rb').addEventListener('click',function(){document.getElementById('rr').textContent='Tables are not reserved. They are given. If she wants you here, you will know.'});</script>
+</body>
+</html>

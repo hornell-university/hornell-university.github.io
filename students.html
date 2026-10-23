@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>People · Hornell</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="Student stories and the people of Hornell University.">
+<link rel="icon" href="assets/img/hu-01_seal_paper.webp">
+<script>try{var m=localStorage.getItem('hornell-mode');if(m==='dark'||m==='light')document.documentElement.setAttribute('data-theme',m)}catch(e){}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Spectral+SC:wght@500;600&family=Spectral:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Permanent+Marker&display=swap">
+<link rel="stylesheet" href="assets/css/site.css">
+</head>
+<body>
+<script src="assets/data/students.js"></script>
+<div class="util g">
+  <div class="in">
+    <nav aria-label="Quick links">
+      <span class="day"><a href="map.html">Visit campus</a></span>
+      <span class="day"><a href="campus.html#calendar">Events</a></span>
+      <span class="day"><a href="athletics.html#schedule">Tickets</a></span>
+      <span class="day"><a href="web.html">Around Hornell</a></span>
+      <span class="night"><a href="bleat.html">Bleat</a></span>
+      <span class="night"><a href="whrn.html">WHRN 88.7</a></span>
+      <span class="night"><a href="nxway.html">Call a Nxway</a></span>
+      <span class="night"><a href="web.html">Ramble</a></span>
+    </nav>
+    <div class="mode" role="group" aria-label="Site mode">
+      <button type="button" data-mode="light" aria-pressed="true">Day</button>
+      <button type="button" data-mode="dark" aria-pressed="false">After Dark</button>
+    </div>
+  </div>
+</div>
+<header class="site-header g">
+  <div class="in">
+    <a class="brand" href="index.html">
+      <img src="assets/img/hu-01_seal_paper.webp" alt="Seal of Hornell University" loading="lazy">
+      <span><b>Hornell University</b><small><span class="day">Any person · any study · 1869</span><span class="night">Horny U · since 1869</span></small></span>
+    </a>
+    <nav class="mainnav" aria-label="Main"><a href="index.html">About</a><a href="campus.html">Campus Life</a><a href="greek.html">Greek Life</a><a href="athletics.html">Athletics</a><a href="map.html">Campus Map</a><a href="students.html" aria-current="page">People</a></nav>
+  </div>
+</header>
+<main>
+
+<section class="phero g">
+  <img class="stk" src="assets/img/st-10.webp" alt="" aria-hidden="true" style="--r:-8deg;top:22px;right:max(16px,4vw)">
+  <div class="in">
+    <div>
+      <p class="eyebrow">Students</p>
+      <h1 class="day">Meet our students</h1><h1 class="night">Who you'll run into</h1>
+      <p class="day lede">Stories from the people who make East Hill what it is.</p><p class="night lede">Everybody on this hill is somebody's main character. Some of them have their own story now.</p>
+    </div>
+    <div class="art"><img src="assets/img/dg-02_goat-badge.webp" alt="The GOAT badge" loading="lazy"></div>
+  </div>
+</section>
+
+<section class="sec g" id="featured">
+  <img class="stk" src="assets/img/st-11.webp" alt="" aria-hidden="true" style="--r:7deg;top:-40px;right:max(16px,5vw)">
+  <div class="in">
+    <div class="head">
+      <p class="eyebrow">Featured students</p>
+      <h2 class="day">Student stories</h2><h2 class="night">Their stories</h2>
+    </div>
+    <div class="cards" id="students"></div>
+    <div class="empty" id="students-empty">
+      <img src="assets/img/hu-01_seal_paper.webp" alt="" loading="lazy">
+      <div>
+        <p class="day"><b>Student profiles are published as each story goes live.</b></p><p class="night"><b>Nobody's been posted yet.</b></p>
+        <p class="day muted">Check back this semester.</p><p class="night muted">Give it a week. Somebody always gets posted.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec sunk g" id="people">
+  <img class="stk" src="assets/img/st-05.webp" alt="" aria-hidden="true" style="--r:-7deg;top:-40px;right:max(16px,5vw)">
+  <div class="in">
+    <div class="head">
+      <p class="eyebrow">Directory</p>
+      <h2 class="day">People of Hornell</h2><h2 class="night">Who's who on East Hill</h2>
+      <p class="day lede">Student leaders, faculty, staff and the neighbors who make Hornell what it is.</p><p class="night lede">Everyone here has plans this semester. Some of them involve you.</p>
+    </div>
+    <div class="pfilters" role="toolbar" aria-label="Filter people"><button type="button" data-f="all" aria-pressed="true">Everyone <span>41</span></button><button type="button" data-f="students" aria-pressed="false">Students <span>22</span></button><button type="button" data-f="greek" aria-pressed="false">Greek Row <span>8</span></button><button type="button" data-f="athletics" aria-pressed="false">Athletics <span>9</span></button><button type="button" data-f="media" aria-pressed="false">Media <span>4</span></button><button type="button" data-f="faculty" aria-pressed="false">Faculty & staff <span>10</span></button><button type="button" data-f="town" aria-pressed="false">Town <span>7</span></button><button type="button" data-f="rivals" aria-pressed="false">Visitors <span>1</span></button></div><div class="pgrid" id="pgrid"><article class="pcard" data-tags="students"><div class="ph scene only" style="--sp:92% 20%"><span class="ini">NH</span><img src="assets/img/people/noor-haddad.webp" alt="Noor Haddad" loading="lazy" onerror="this.remove()"></div><div class="pb"><h3>Noor Haddad <small>21</small></h3><p class="pr">Junior · Communications · Resident Advisor, Long Tower</p><p class="pq night">Soup when you're sick. Knows everything about you. Somehow.</p></div></article><article class="pcard" data-tags="students"><div class="ph scene only" style="--sp:72% 15%"><span class="ini">WK</span><img src="assets/img/people/wren-kostecki.webp" alt="Wren Kostecki" loading="lazy" onerror="this.remove()"></div><div class="pb"><h3>Wren Kostecki <small>20</small></h3><p class="pr">Sophomore · Printmaking · Maple Scholar</p><p class="pq night">“Hold still. Don't smile. Nobody smiles at the DMV.”</p></div></article><article class="pcard" data-tags="students greek"><div class="ph scene only" style="--sp:59% 41%"><span class="ini">HP</span><img src="assets/img/people/hadley-prescott.webp" alt="Hadley Prescott" loading="lazy" onerror="this.remove()"></div><div class="pb"><h3>Hadley Prescott <small>19</small></h3><p class="pr">Sophomore · Economics · Pledge class president, Beta Rho Alpha Tau</p><p class="pq night">Avery's favorite pledge. Writes everything down.</p></div></article><article class="pcard" data-tags="students athletics"><div class="ph scene only" style="--sp:79% 59%"><span class="ini">LP</span><img src="assets/img/people/laney-price.webp" alt="Laney Price" loading="lazy" onerror="this.remove()"></div><div class="pb"><h3>Laney Price <small>20</small></h3><p class="pr">Junior · Marketing · Spirit Squad flyer</p><p class="pq night">Nine weeks at #2 on the Horn List. Needs a boyfriend by Saturday.</p></div></article><article class="pcard" data-tags="students media"><div class="ph scene only" style="--sp:70% 34%"><span class="ini">TC</span><img src="assets/img/people/tamsin-cho.webp" alt="Tamsin Cho" loading="lazy" onerror="this.remove()"></div><div class="pb"><h3>Tamsin Cho <small>20</small></h3><p class="pr">Sophomore · Computer Science · Battering Rams esports</p><p class="pq night">On mic, the most toxic person in the Northeast. Off mic, she brings snacks.</p></div></article><article class="pcard" data-tags="students"><div class="ph scene only" style="--sp:72% 15%"><span class="ini">MQ</span><img src="assets/img/people/maddie-quinlan.webp" alt="Maddie Quinlan" loading="lazy" onerror="this.remove()"></div><div class="pb"><h3>Maddie Quinlan <small>21</small></h3><p class="pr">Senior · Theater Design</p><p class="pq night">The QR code drops two hours before. Phones don't work down there.</p></div></article><article class="pcard" data-tags="students athletics"><div class="ph scene only" style="--sp:87% 69%"><span class="ini">AL</span><img src="assets/img/people/annika-lindqvist.webp" alt="Annika Lindqvist" loading="lazy" onerror="this.remove()"></div><div class="pb"><h3>Annika Lindqvist <small>22</small></h3><p class="pr">Senior · Kinesiology · Captain, women's hockey</p><p class="pq night">“Five shots. If I score three, you buy.” Gold tooth.</p></div></article><article class="pcard" data-tags="students"><div class="ph scene only" style="--sp:39% 60%"><span class="ini">TA</span><img src="assets/img/people/teddy-abruzzo.webp" alt="Teddy Abruzzo" loading="lazy" onerror="this.remove()"></div><div class="pb"><h3>Teddy Abruzzo <small>22</small></h3><p class="pr">Senior · Finance, Fuchs School</p><p class="pq night">Odds on anything. Ask him about your own.</p></div></article><article class="pcard" data-tags="students athletics"><div class="ph scene only" style="--sp:87% 69%"><span class="ini">MB</span><img src="assets/img/people/mathieu-bergeron.webp" alt="Mathieu Bergeron" loading="lazy" onerror="this.remove()"></div><div class="pb"><h3>Mathieu Bergeron <small>22</small></h3><p class="pr">Senior · Goaltender, Rams hockey</p><p class="pq night">Forty pre-game rituals. Doesn't date in season. Swears in French.</p></div></article><article class="pcard" data-tags="students"><div class="ph scene only" style="--sp:53% 60%"><span class="ini">OB</span><img src="assets/img/people/oz-brennan.webp" alt="Oz Brennan" loading="lazy" onerror="this.remove()"></div><div class="pb"><h3>Oz Brennan <small>25</small></h3><p class="pr">Undergraduate · Classics</p><p class="pq night">Seventh year, fifth major, $200 rent. Every story since 2019.</p></div></article><article class="pcard" data-tags="students"><div class="ph scene only" style="--sp:72% 15%"><span class="ini">DA</span><img src="assets/img/people/delia-ames.webp" alt="Delia Ames" loading="lazy" onerror="this.remove()"></div><div class="pb"><h3>Delia Ames <small>21</small></h3><p class="pr">Senior · History</p><p class="pq night">Rarely speaks first. Something gold over her arm.</p></div></article><article class="pcard" data-tags="faculty"><div class="ph scene only" style="--sp:76% 30%"><span class="ini">PR</span><img src="assets/img/people/priya-raman.webp" alt="Priya Raman" loading="lazy" onerror="this.remove()"></div><div class="pb"><h3>Priya Raman <small>26</small></h3><p class="pr">PhD candidate · Chemistry · Head TA, Organic Chemistry</p><p class="pq night">Regrades in person, Thursdays at O'Shea's. You're buying.</p></div></article><article class="pcard" data-tags="faculty"><div class="ph scene only" style="--sp:72% 15%"><span class="ini">IB</span><img src="assets/img/people/ilse-brandt.webp" alt="Dr. Ilse Brandt" loading="lazy" onerror="this.remove()"></div><div class="pb"><h3>Dr. Ilse Brandt <small>34</small></h3><p class="pr">Visiting Professor · Comparative Literature</p><p class="pq night">Literature of Desire: twenty seats, 300 on the waitlist. She's taking notes on you.</p></div></article><article class="pcard" data-tags="town"><div class="ph scene only" style="--sp:53% 60%"><span class="ini">CM</span><img src="assets/img/people/celeste-marchetti.webp" alt="Celeste Marchetti" loading="lazy" onerror="this.remove()"></div><div class="pb"><h3>Celeste Marchetti <small>36</small></h3><p class="pr">Regional Manager, Sovereign Property Group</p><p class="pq night">Just needs to understand how a sofa got onto a roof.</p></div></article><article class="pcard" data-tags="town"><div class="ph scene only" style="--sp:39% 60%"><span class="ini">CW</span><img src="assets/img/people/casey-wojcik.webp" alt="Casey Wojcik" loading="lazy" onerror="this.remove()"></div><div class="pb"><h3>Casey Wojcik <small>22</small></h3><p class="pr">Owner, Wojcik & Daughter Auto</p><p class="pq night">Route 36, Friday night, pink slips. Hasn't lost in two years.</p></div></article><article class="pcard" data-tags="town"><div class="ph scene only" style="--sp:39% 60%"><span class="ini">EK</span><img src="assets/img/people/ezra-kalinowski.webp" alt="Ezra Kalinowski" loading="lazy" onerror="this.remove()"></div><div class="pb"><h3>Ezra Kalinowski <small>21</small></h3><p class="pr">Apprentice artist, Thorns n' Roses</p><p class="pq night">Tattoos for free, if he picks where it goes.</p></div></article><article class="pcard" data-tags="rivals"><div class="ph scene only" style="--sp:79% 59%"><span class="ini">JP</span><img src="assets/img/people/jolene-pruitt.webp" alt="Jolene Pruitt" loading="lazy" onerror="this.remove()"></div><div class="pb"><h3>Jolene Pruitt <small>20</small></h3><p class="pr">Transfer student</p><p class="pq night">Says “Go Rams” like it's a foreign language.</p></div></article><article class="pcard" data-tags="students athletics greek"><div class="ph scene only" style="--sp:79% 59%"><span class="ini">BH</span><img src="assets/img/people/brody-haskins.webp" alt="Brody Haskins" loading="lazy" onerror="this.remove()"></div><div class="pb"><h3>Brody Haskins <small>22</small></h3><p class="pr">Senior · Starting quarterback, No. 7 · Chi Alpha Delta</p><p class="pq night">“Hey, good to see you!” His hand is on your shoulder; his eyes are already on the next person.</p></div></article><article class="pcard" data-tags="students greek"><div class="ph scene only" style="--sp:59% 41%"><span class="ini">AW</span><img src="assets/img/people/avery-van-wyck.webp" alt="Avery Van Wyck" loading="lazy" onerror="this.remove()"></div><div class="pb"><h3>Avery Van Wyck <small>21</small></h3><p class="pr">Senior · Communications · President, Beta Rho Alpha Tau</p><p class="pq night">“Oh, I love that you came. Who invited you, again?”</p></div></article><article class="pcard" data-tags="students greek"><div class="ph scene only" style="--sp:59% 41%"><span class="ini">CI</span><img src="assets/img/people/chadwick-burke-iii.webp" alt="Chadwick Burke III" loading="lazy" onerror="this.remove()"></div><div class="pb"><h3>Chadwick Burke III <small>21</small></h3><p class="pr">Senior · Finance, Fuchs · President, Chi Alpha Delta</p><p class="pq night">“Let's not make this a whole thing. What do you need for it to go away?”</p></div></article><article class="pcard" data-tags="students greek athletics"><div class="ph scene only" style="--sp:59% 41%"><span class="ini">GR</span><img src="assets/img/people/gianna-russo.webp" alt="Gianna Russo" loading="lazy" onerror="this.remove()"></div><div class="pb"><h3>Gianna Russo <small>21</small></h3><p class="pr">Junior · Nursing · Captain, women's soccer · President, Theta Omicron Tau</p><p class="pq night">“Absolutely not. Who said that? Point. Point at them, babe.”</p></div></article><article class="pcard" data-tags="students greek"><div class="ph scene only" style="--sp:59% 41%"><span class="ini">DR</span><img src="assets/img/people/dex-ruiz.webp" alt="Dex Ruiz" loading="lazy" onerror="this.remove()"></div><div class="pb"><h3>Dex Ruiz <small>23</small></h3><p class="pr">Fifth-year senior · Kinesiology · President, Kappa Epsilon Gamma</p><p class="pq night">“Yo! Somebody get this person a drink. Not that one. A good one.”</p></div></article><article class="pcard" data-tags="students greek"><div class="ph scene only" style="--sp:59% 41%"><span class="ini">KP</span><img src="assets/img/people/kevin-park.webp" alt="Kevin Park" loading="lazy" onerror="this.remove()"></div><div class="pb"><h3>Kevin Park <small>21</small></h3><p class="pr">Junior · Computer Engineering · President, Sigma Iota Mu Pi</p><p class="pq night">“There's brunch Sunday, and I made too much French toast, like, structurally too much.”</p></div></article><article class="pcard" data-tags="students greek"><div class="ph scene only" style="--sp:59% 41%"><span class="ini">LL</span><img src="assets/img/people/lilith-lutz.webp" alt="Lilith Lutz" loading="lazy" onerror="this.remove()"></div><div class="pb"><h3>Lilith Lutz <small>20</small></h3><p class="pr">Junior · Studio Art · President, Gamma Omicron Theta</p><p class="pq night">“It's Lilith. The Karen was a clerical error.”</p></div></article><article class="pcard" data-tags="students"><div class="ph scene only" style="--sp:70% 34%"><span class="ini">JR</span><img src="assets/img/people/javi-rosario.webp" alt="Javi Rosario" loading="lazy" onerror="this.remove()"></div><div class="pb"><h3>Javi Rosario <small>21</small></h3><p class="pr">Senior · Government · SGA President · Maple Scholar</p><p class="pq night">“I hear you. Give me a week. I'll talk to the right people.”</p></div></article><article class="pcard" data-tags="students media"><div class="ph scene only" style="--sp:70% 34%"><span class="ini">TF</span><img src="assets/img/people/talia-feldman.webp" alt="Talia Feldman" loading="lazy" onerror="this.remove()"></div><div class="pb"><h3>Talia Feldman <small>20</small></h3><p class="pr">Junior · Journalism · Editor-in-chief, the Daily Ram</p><p class="pq night">“Can I quote you on that? No? Then tell me off the record.”</p></div></article><article class="pcard" data-tags="students media"><div class="ph scene only" style="--sp:39% 60%"><span class="ini">JK</span><img src="assets/img/people/jess-kowalczyk.webp" alt="Jess Kowalczyk" loading="lazy" onerror="this.remove()"></div><div class="pb"><h3>Jess Kowalczyk <small>21</small></h3><p class="pr">Junior · Audio Engineering · Chief engineer, WHRN</p><p class="pq night">“If you're not kissing somebody yet, this is your chance.”</p></div></article><article class="pcard" data-tags="students media"><div class="ph scene only" style="--sp:70% 34%"><span class="ini">DD</span><img src="assets/img/people/dj-dizzy.webp" alt="DJ Dizzy" loading="lazy" onerror="this.remove()"></div><div class="pb"><h3>DJ Dizzy <small>21</small></h3><p class="pr">Junior · Music Technology · Host, After Hours on WHRN</p><p class="pq night">“It's 2:14 a.m., and somebody in Long Tower can't sleep.”</p></div></article><article class="pcard" data-tags="athletics"><div class="ph scene only" style="--sp:79% 59%"><span class="ini">S</span><img src="assets/img/people/shika.webp" alt="Shika" loading="lazy" onerror="this.remove()"></div><div class="pb"><h3>Shika</h3><p class="pr">Live mascot · white Nubian goat</p><p class="pq night">Has bitten two trustees. Will eat your program.</p></div></article><article class="pcard" data-tags="faculty"><div class="ph scene only" style="--sp:72% 15%"><span class="ini">RH</span><img src="assets/img/people/richard-halloran.webp" alt="Dr. Richard Halloran" loading="lazy" onerror="this.remove()"></div><div class="pb"><h3>Dr. Richard Halloran <small>64</small></h3><p class="pr">President of the University</p><p class="pq night">“Our Ram family.” On Bleat he is Dick Halloran, which he knows.</p></div></article><article class="pcard" data-tags="faculty"><div class="ph scene only" style="--sp:72% 15%"><span class="ini">BS</span><img src="assets/img/people/barbara-szymanski.webp" alt="Barbara Szymanski" loading="lazy" onerror="this.remove()"></div><div class="pb"><h3>Barbara Szymanski <small>57</small></h3><p class="pr">Dean of Students</p><p class="pq night">“Sit down, hon. I already have the report, so let's start with what isn't in it.”</p></div></article><article class="pcard" data-tags="faculty"><div class="ph scene only" style="--sp:76% 30%"><span class="ini">WG</span><img src="assets/img/people/walter-gruber.webp" alt="Prof. Walter Gruber" loading="lazy" onerror="this.remove()"></div><div class="pb"><h3>Prof. Walter Gruber <small>63</small></h3><p class="pr">Organic Chemistry I and II</p><p class="pq night">“Where do the electrons go?” Has never once curved.</p></div></article><article class="pcard" data-tags="faculty"><div class="ph scene only" style="--sp:72% 15%"><span class="ini">LK</span><img src="assets/img/people/linda-kaplan.webp" alt="Dr. Linda Kaplan" loading="lazy" onerror="this.remove()"></div><div class="pb"><h3>Dr. Linda Kaplan <small>46</small></h3><p class="pr">PSY 101 · Pulaski 101</p><p class="pq night">“Wheel, give me two volunteers.”</p></div></article><article class="pcard" data-tags="faculty"><div class="ph scene only" style="--sp:72% 15%"><span class="ini">DP</span><img src="assets/img/people/darlene-petrucci.webp" alt="Sgt. Darlene Petrucci" loading="lazy" onerror="this.remove()"></div><div class="pb"><h3>Sgt. Darlene Petrucci <small>49</small></h3><p class="pr">HUPD · Night shift</p><p class="pq night">“Hi, sweetheart. Whose party is this? You've got ten minutes.”</p></div></article><article class="pcard" data-tags="faculty athletics"><div class="ph scene only" style="--sp:79% 59%"><span class="ini">SB</span><img src="assets/img/people/sal-bruno.webp" alt="Coach Sal Bruno" loading="lazy" onerror="this.remove()"></div><div class="pb"><h3>Coach Sal Bruno</h3><p class="pr">Head football coach</p><p class="pq night">Calls every player “son.” Never wears a coat on the sideline.</p></div></article><article class="pcard" data-tags="faculty athletics"><div class="ph scene only" style="--sp:92% 59%"><span class="ini">AF</span><img src="assets/img/people/ana-ferreira.webp" alt="Coach Ana Ferreira" loading="lazy" onerror="this.remove()"></div><div class="pb"><h3>Coach Ana Ferreira</h3><p class="pr">Head coach, women's volleyball · three national titles</p><p class="pq night">Never raises her voice. Late twice and you're cut.</p></div></article><article class="pcard" data-tags="faculty athletics"><div class="ph scene only" style="--sp:79% 59%"><span class="ini">BH</span><img src="assets/img/people/brandi-holcomb.webp" alt="Coach Brandi Holcomb" loading="lazy" onerror="this.remove()"></div><div class="pb"><h3>Coach Brandi Holcomb <small>37</small></h3><p class="pr">Spirit Squad and the Ramettes</p><p class="pq night">Bans dating football players. Has never once enforced it.</p></div></article><article class="pcard" data-tags="town"><div class="ph scene only" style="--sp:39% 60%"><span class="ini">DM</span><img src="assets/img/people/dee-marchetti.webp" alt="Dee Marchetti" loading="lazy" onerror="this.remove()"></div><div class="pb"><h3>Dee Marchetti <small>64</small></h3><p class="pr">Owner, the Randy Ram</p><p class="pq night">Cards everyone, every time. Nobody knows how she knows.</p></div></article><article class="pcard" data-tags="town"><div class="ph scene only" style="--sp:46% 82%"><span class="ini">EC</span><img src="assets/img/people/eun-ji-sunny-cho.webp" alt="Eun-ji “Sunny” Cho" loading="lazy" onerror="this.remove()"></div><div class="pb"><h3>Eun-ji “Sunny” Cho</h3><p class="pr">Owner, Sunny's Diner</p><p class="pq night">Feeds broke students on credit she never collects.</p></div></article><article class="pcard" data-tags="town"><div class="ph scene only" style="--sp:39% 60%"><span class="ini">L</span><img src="assets/img/people/luc.webp" alt="Luc" loading="lazy" onerror="this.remove()"></div><div class="pb"><h3>Luc</h3><p class="pr">Owner, the Morning Wood Café</p><p class="pq night">Insists the name is about the barn wood. Nine years, straight face.</p></div></article><article class="pcard" data-tags="town"><div class="ph scene only" style="--sp:8% 57%"><span class="ini">H</span><img src="assets/img/people/hector.webp" alt="Hector" loading="lazy" onerror="this.remove()"></div><div class="pb"><h3>Hector</h3><p class="pr">Night concierge, Roundhouse Lofts</p><p class="pq night">Knows everyone's business. Has never repeated any of it.</p></div></article></div>
+  </div>
+</section>
+
+<section class="sec g night" id="regulars">
+  <div class="in">
+    <div class="head">
+      <p class="eyebrow">Campus regulars</p>
+      <h2>Everyone recognizes them. Nobody knows them.</h2>
+    </div>
+    <div class="people three"><div class="person"><p class="pn">Brother Gene</p><p class="pr">Preaches damnation at sunbathers on the Quad. Reads Bleat and names specific sins.</p></div><div class="person"><p class="pn">Shirtless Tanner</p><p class="pr">A KEG brother never seen in a shirt, including at −15°C on Ramsey Watch.</p></div><div class="person"><p class="pn">Tour Guide Tiffany</p><p class="pr">Walks backwards with thirty parents and arrives at the worst possible moment.</p></div><div class="person"><p class="pn">PSA Paul</p><p class="pr">Posts a “PSA:” thread on Bleat every single day.</p></div><div class="person"><p class="pn">Nap Girl</p><p class="pr">Asleep in the Cockburn Reading Room from 2 to 4. Nobody knows her name. The current GOAT.</p></div><div class="person"><p class="pn">Proposal Pete</p><p class="pr">Proposes to someone new every Hump Day. Still unmarried.</p></div></div>
+  </div>
+</section>
+
+</main>
+<footer class="foot g">
+  <div class="in">
+    <div class="addr">
+      <img src="assets/img/hu-02_seal_1869_paper.webp" alt="The 1869 seal" loading="lazy">
+      <div>
+        <p><b>Hornell University</b></p>
+        <p class="muted">Wetmore Gate, East Hill<br>Hornell, New York 14843</p>
+        <p class="day"><span class="muted">Founded 1869 by Cyrus Wetmore. Any person, any study.</span></p><p class="night"><span class="hand">...any position.</span></p>
+      </div>
+    </div>
+    <div>
+      <h4>Explore</h4>
+      <ul>
+        <li><a href="campus.html">Campus Life</a></li>
+        <li><a href="greek.html">Greek Life</a></li>
+        <li><a href="athletics.html">Athletics</a></li>
+        <li><a href="map.html">Campus Map</a></li>
+        <li><a href="students.html">People</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Campus media</h4>
+      <ul>
+        <li><a href="dailyram.html">The Daily Ram</a></li>
+        <li><a href="whrn.html">WHRN 88.7 "The Horn"</a></li>
+        <li><a href="bleat.html">Bleat</a></li>
+        <li><a href="unfiltered.html">@hornyu.unfiltered</a></li>
+        <li><a href="web.html">Ramble: the Hornell web</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>The world</h4>
+      <ul>
+        <li><a href="https://discord.gg/ubmxa9a9fb" target="_blank" rel="noopener">FLXTRA on Discord</a></li>
+        <li><a href="https://discord.gg/VQkSw7YzJ2" target="_blank" rel="noopener">The Village on Discord</a></li>
+      </ul>
+    </div>
+    <div class="fine">
+      <span>Hornell University, its people and its campus are fiction. Hornell, the Canisteo River and the Erie Railroad are real.</span>
+      <span>The world of the Hornell bots · CrazyIto</span>
+    </div>
+  </div>
+</footer>
+<script src="assets/data/glossary.js"></script>
+<script src="assets/js/site.js"></script>
+<script src="assets/data/chat.js"></script>
+<script src="assets/js/chat.js" defer></script>
+<script>(function(){var bs=[].slice.call(document.querySelectorAll('.pfilters button')),cs=[].slice.call(document.querySelectorAll('#pgrid .pcard'));
+bs.forEach(function(b){b.addEventListener('click',function(){var f=b.dataset.f;bs.forEach(function(x){x.setAttribute('aria-pressed',x===b)});
+cs.forEach(function(c){c.hidden=!(f==='all'||(' '+c.dataset.tags+' ').indexOf(' '+f+' ')>=0)})})})})();</script>
+</body>
+</html>

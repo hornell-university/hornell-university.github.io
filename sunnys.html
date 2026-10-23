@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Sunny&#x27;s Diner · Open 24 Hours</title>
+<meta name="description" content="Sunny&#x27;s Diner, Hornell: open 24 hours, home of the Dumpster Plate.">
+<link rel="icon" href="assets/img/tw-05_sunnys-diner.webp">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Pacifico&family=Alfa+Slab+One&family=Roboto+Condensed:wght@400;700&display=swap">
+<style>
+.wb{position:sticky;top:0;z-index:999;display:flex;align-items:center;gap:8px;height:42px;padding:0 max(10px,env(safe-area-inset-left,0px)) 0 max(10px,env(safe-area-inset-left,0px));
+ background:#dfe1e5;border-bottom:1px solid #c4c7cc;font:500 13px/1 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;color:#3c4043}
+.wb a,.wb button{color:inherit;text-decoration:none}
+.wb .nav{display:flex;gap:2px}
+.wb .nav a,.wb .nav button{display:inline-flex;align-items:center;justify-content:center;width:30px;height:30px;border-radius:50%;border:0;background:transparent;cursor:pointer;font-size:16px}
+.wb .nav a:hover,.wb .nav button:hover{background:#c8cbd0}
+.wb .url{flex:1;min-width:0;display:flex;align-items:center;gap:7px;height:30px;padding:0 12px;border-radius:15px;background:#fff;white-space:nowrap;overflow:hidden}
+.wb .url .lock{font-size:11px;color:#5f6368}
+.wb .url b{font-weight:600;color:#202124}
+.wb .url span{color:#80868b;overflow:hidden;text-overflow:ellipsis}
+.wb .tabs{display:flex;gap:6px}
+.wb .tabs a{display:inline-flex;align-items:center;gap:6px;height:30px;padding:0 10px;border-radius:15px;background:#eef0f2;font-weight:600;font-size:12px;white-space:nowrap}
+.wb .tabs a:hover{background:#fff}
+.wb .tabs img{width:16px;height:16px;border-radius:3px}
+@media (max-width:620px){.wb .fwd,.wb .tabs .lbl{display:none}.wb .tabs a{padding:0 8px}}
+
+
+*{box-sizing:border-box}
+body{margin:0;background:#c9e9e4 repeating-conic-gradient(#e9f6f3 0 25%,#c9e9e4 0 50%) 0 0/48px 48px;color:#2a1a14;font:16px/1.5 "Roboto Condensed",Arial Narrow,sans-serif}
+a{color:#c21f2f}
+.sign{text-align:center;padding:30px 16px 10px}
+.sign img{width:min(380px,80vw);margin:0 auto;filter:drop-shadow(0 10px 16px rgba(0,0,0,.25))}
+.sign .open{display:inline-block;margin-top:10px;background:#1b1b1b;color:#ff3b4a;font:400 22px/1 "Alfa Slab One",Georgia,serif;padding:10px 18px;border-radius:8px;letter-spacing:.06em;text-shadow:0 0 10px #ff3b4a;border:3px solid #c0c0c0}
+.menu{max-width:860px;margin:20px auto 40px;background:#fffaf0;border:10px solid #c21f2f;border-radius:18px;box-shadow:0 0 0 6px #c0c0c0,0 24px 50px rgba(0,0,0,.25);padding:26px 28px 30px;position:relative}
+.menu::before{content:"";position:absolute;inset:6px;border:2px dashed #e7b9a8;border-radius:10px;pointer-events:none}
+.menu h1{font:400 clamp(40px,7vw,64px)/1 Pacifico,cursive;color:#c21f2f;text-align:center;margin:0}
+.menu .sub{text-align:center;font-weight:700;letter-spacing:.2em;text-transform:uppercase;font-size:12px;color:#7a5a4a;margin:8px 0 18px}
+.menu h2{font:400 24px/1 "Alfa Slab One",Georgia,serif;color:#fff;background:#c21f2f;display:inline-block;padding:8px 14px;border-radius:6px;margin:22px 0 10px;transform:rotate(-1deg)}
+.it{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:2px 16px;padding:10px 0;border-bottom:1px dotted #d8bfae}
+.it b{font:700 19px/1.2 "Roboto Condensed",Arial Narrow,sans-serif;text-transform:uppercase;letter-spacing:.02em}
+.it .pr{font:400 20px/1 "Alfa Slab One",Georgia,serif;color:#c21f2f}
+.it p{grid-column:1/-1;margin:0;color:#5c4438;font-size:15px}
+.it.star{background:#fff1b8;margin:6px -10px;padding:12px 10px;border:2px solid #f2c94c;border-radius:8px}
+.it.star b::after{content:"  \2605 SUNNY'S FAMOUS";font-size:12px;color:#c21f2f;letter-spacing:.1em}
+.rules{background:#2a1a14;color:#fff3d6;border-radius:12px;padding:18px 20px;margin-top:24px}
+.rules h3{margin:0 0 8px;font:400 26px/1 Pacifico,cursive;color:#ffd166}
+.rules li{margin-bottom:6px}
+.sunny{display:flex;gap:16px;align-items:center;margin-top:22px;border-top:2px dashed #e7b9a8;padding-top:18px}
+.sunny .s{flex:0 0 70px;height:70px;border-radius:50%;background:radial-gradient(circle,#ffd166 0 45%,#f4a300 46% 60%,transparent 61%),#fff1b8;border:3px solid #c21f2f}
+.sunny p{margin:0;font-size:15px}
+.ft{text-align:center;font-weight:700;padding:0 16px 40px;color:#2a1a14}
+</style>
+</head>
+<body>
+<div class="wb" role="navigation" aria-label="Browser"><div class="nav"><button type="button" onclick="history.length>1?history.back():location.href='web.html'" aria-label="Back">←</button><button type="button" class="fwd" onclick="history.forward()" aria-label="Forward">→</button><a href="sunnys.html" aria-label="Reload">↻</a></div><div class="url"><span class="lock">🔒</span><b>sunnysdiner.com</b><span>/menu</span></div><div class="tabs"><a href="web.html"><span aria-hidden="true">🔎</span><span class="lbl">Ramble</span></a><a href="index.html"><img src="assets/img/hu-01_seal_paper.webp" alt=""><span class="lbl">hornell.edu</span></a></div></div>
+
+<div class="sign"><img src="assets/img/tw-05_sunnys-diner.webp" alt="Sunny's Diner"><br><span class="open">OPEN 24 HRS</span></div>
+<main class="menu"><h1>Sunny's</h1><p class="sub">Route 36 at the edge of town · since 1991 · cash, card, or “next time”</p><h2>Breakfast, all day, all night</h2><div class="it"><b>Hubcap Pancakes</b><span class="pr">8.50</span><p>Three pancakes the size of hubcaps. We are not exaggerating. Bring a friend.</p></div><div class="it"><b>Two Eggs Any Style</b><span class="pr">7.25</span><p>Toast, home fries, bottomless coffee.</p></div><div class="it"><b>Railroad Skillet</b><span class="pr">11.00</span><p>Home fries, peppers, onions, sausage, two eggs, cheese, regret.</p></div><div class="it"><b>French Toast</b><span class="pr">8.75</span><p>Thick-cut. Kevin from SIMP says ours is better than his. Kevin is being nice.</p></div><h2>The Plates</h2><div class="it star"><b>THE DUMPSTER PLATE</b><span class="pr">12.95</span><p>Home fries, mac salad, two cheeseburgers, meat sauce, onions &amp; mustard. Cures hangovers. Causes naps. Our version of the Rochester classic.</p></div><div class="it"><b>Half a Dumpster</b><span class="pr">8.95</span><p>For people who think they can&#x27;t. You can.</p></div><div class="it"><b>Breakup Plate</b><span class="pr">9.50</span><p>Grilled cheese, tomato soup, a slice of pie, no questions.</p></div><h2>Pie &amp; sweets</h2><div class="it"><b>Pie of the Day</b><span class="pr">4.75</span><p>Ask your waitress. It&#x27;s apple. It&#x27;s always apple in October.</p></div><div class="it"><b>Milkshake</b><span class="pr">5.50</span><p>Vanilla, chocolate, strawberry, or “the pink one.”</p></div><h2>Coffee</h2><div class="it"><b>Bottomless Coffee</b><span class="pr">2.25</span><p>It is actually bottomless. Finals week regulars have tested this.</p></div>
+<div class="rules"><h3>House rules</h3><ol><li>Open 24 hours, 7 days. Christmas Day too. Sunny has never closed.</li><li>If you are short on money, eat anyway. Sunny keeps a tab. Sunny never collects the tab.</li><li>If you are rude to a waitress, you are done here. Forever. Sunny remembers faces better than Dee Marchetti.</li><li>No fighting about the Rut vs. Embers in booth 6. Booth 6 is for breakups.</li></ol></div>
+<div class="sunny"><div class="s" aria-hidden="true"></div><p><b>From Sunny:</b> Every after-party, every all-nighter and every breakup in this town ends at my counter. Sit down. Eat something. You look tired, honey.</p></div></main>
+<p class="ft">Sunny's Diner · Hornell, NY · Booth 6 is for breakups · <a href="web.html">Ramble</a></p>
+</body>
+</html>

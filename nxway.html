@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Nxway · Free late-night rides</title>
+<meta name="description" content="Nxway: free late-night rides in Hornell, 8 p.m. to 3 a.m.">
+<link rel="icon" href="assets/img/dg-07_nxway.webp">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap">
+<style>
+.wb{position:sticky;top:0;z-index:999;display:flex;align-items:center;gap:8px;height:42px;padding:0 max(10px,env(safe-area-inset-left,0px)) 0 max(10px,env(safe-area-inset-left,0px));
+ background:#dfe1e5;border-bottom:1px solid #c4c7cc;font:500 13px/1 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;color:#3c4043}
+.wb a,.wb button{color:inherit;text-decoration:none}
+.wb .nav{display:flex;gap:2px}
+.wb .nav a,.wb .nav button{display:inline-flex;align-items:center;justify-content:center;width:30px;height:30px;border-radius:50%;border:0;background:transparent;cursor:pointer;font-size:16px}
+.wb .nav a:hover,.wb .nav button:hover{background:#c8cbd0}
+.wb .url{flex:1;min-width:0;display:flex;align-items:center;gap:7px;height:30px;padding:0 12px;border-radius:15px;background:#fff;white-space:nowrap;overflow:hidden}
+.wb .url .lock{font-size:11px;color:#5f6368}
+.wb .url b{font-weight:600;color:#202124}
+.wb .url span{color:#80868b;overflow:hidden;text-overflow:ellipsis}
+.wb .tabs{display:flex;gap:6px}
+.wb .tabs a{display:inline-flex;align-items:center;gap:6px;height:30px;padding:0 10px;border-radius:15px;background:#eef0f2;font-weight:600;font-size:12px;white-space:nowrap}
+.wb .tabs a:hover{background:#fff}
+.wb .tabs img{width:16px;height:16px;border-radius:3px}
+@media (max-width:620px){.wb .fwd,.wb .tabs .lbl{display:none}.wb .tabs a{padding:0 8px}}
+
+
+*{box-sizing:border-box}
+body{margin:0;background:#0b0b0f;color:#f2f2f5;font:16px/1.55 "Space Grotesk",system-ui,sans-serif}
+a{color:inherit;text-decoration:none}
+img{display:block;max-width:100%}
+.in{max-width:1120px;margin:0 auto;padding:0 18px}
+.hd .in{display:flex;align-items:center;justify-content:space-between;padding-top:16px;padding-bottom:16px}
+.wm{font:700 24px/1 "Space Grotesk",system-ui,sans-serif;letter-spacing:.02em;display:flex;align-items:center;gap:8px}
+.wm .moon{width:22px;height:22px;border-radius:50%;box-shadow:6px -4px 0 0 #e8313a;transform:rotate(-20deg)}
+.wm b{color:#e8313a}
+.get{background:#e8313a;color:#fff;font-weight:700;padding:11px 18px;border-radius:999px;font-size:14px}
+.hero{padding:40px 0 70px;position:relative;overflow:hidden}
+.hero::before{content:"";position:absolute;right:-160px;top:-120px;width:560px;height:560px;border-radius:50%;background:radial-gradient(circle,#2a0f14 0%,transparent 70%)}
+.hero .in{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:40px;align-items:center;position:relative}
+@media (max-width:860px){.hero .in{grid-template-columns:1fr}}
+.hero h1{font:700 clamp(44px,7vw,86px)/.95 "Space Grotesk",system-ui,sans-serif;letter-spacing:-.04em;margin:0}
+.hero h1 b{color:#e8313a}
+.hero p{font-size:19px;color:#b9b9c6;max-width:40ch;margin:18px 0 26px}
+.hours{display:inline-flex;gap:10px;align-items:center;font-weight:600;color:#b9b9c6;border:1px solid #2a2a35;border-radius:999px;padding:9px 14px;font-size:14px}
+.hours i{width:9px;height:9px;border-radius:50%;background:#3ddc84}
+.hours.off i{background:#e8313a}
+.phone{justify-self:center;width:290px;border-radius:40px;background:#16161d;border:10px solid #22222c;padding:18px 16px 22px;box-shadow:0 40px 80px rgba(0,0,0,.6)}
+.phone .bar{width:90px;height:22px;background:#0b0b0f;border-radius:0 0 14px 14px;margin:-18px auto 14px}
+.phone .map{height:200px;border-radius:18px;background:url(assets/img/map-02_overview.webp) 52% 55%/700% no-repeat;position:relative;filter:saturate(.6) brightness(.7)}
+.phone .map::after{content:"";position:absolute;left:46%;top:44%;width:16px;height:16px;border-radius:50%;background:#e8313a;box-shadow:0 0 0 8px rgba(232,49,58,.25)}
+.phone h3{margin:14px 0 2px;font-size:15px;color:#b9b9c6;font-weight:500}
+.phone .eta{font:700 46px/1 "Space Grotesk",system-ui,sans-serif;letter-spacing:-.03em;font-variant-numeric:tabular-nums}
+.phone .eta small{font-size:16px;color:#b9b9c6;font-weight:500}
+.phone .why{font-size:13px;color:#8d8d9b;min-height:3em;margin:6px 0 12px}
+.phone .req{display:block;text-align:center;background:#e8313a;color:#fff;font-weight:700;border-radius:14px;padding:13px;cursor:pointer;border:0;width:100%;font:700 15px "Space Grotesk",system-ui,sans-serif}
+.phone .q{display:none;margin-top:10px;font-size:13px;color:#3ddc84;text-align:center}
+section{padding:60px 0;border-top:1px solid #1d1d26}
+h2{font:700 clamp(30px,4vw,44px)/1 "Space Grotesk",system-ui,sans-serif;letter-spacing:-.03em;margin:0 0 26px}
+.steps{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+@media (max-width:820px){.steps{grid-template-columns:1fr}}
+.step{background:#14141b;border:1px solid #23232e;border-radius:22px;padding:24px}
+.step b{display:inline-flex;width:38px;height:38px;border-radius:50%;background:#e8313a;align-items:center;justify-content:center;font-weight:700}
+.step h3{margin:14px 0 6px;font-size:21px}
+.step p{margin:0;color:#a6a6b4}
+.rules{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;counter-reset:r}
+@media (max-width:720px){.rules{grid-template-columns:1fr}}
+.rules div{counter-increment:r;display:flex;gap:14px;background:#14141b;border-radius:16px;padding:16px 18px;color:#d8d8e0}
+.rules div::before{content:counter(r,decimal-leading-zero);font-weight:700;color:#e8313a}
+.faq details{border-bottom:1px solid #23232e;padding:18px 0}
+.faq summary{cursor:pointer;font-weight:700;font-size:19px;list-style:none;display:flex;justify-content:space-between;gap:10px}
+.faq summary::after{content:"+";color:#e8313a}
+.faq details[open] summary::after{content:"\2212"}
+.faq p{margin:10px 0 0;color:#a6a6b4}
+.drive{background:#e8313a;border-radius:28px;padding:34px;display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap}
+.drive h2{margin:0;color:#fff}
+.drive p{margin:6px 0 0;color:#ffd6d8}
+.drive a{background:#0b0b0f;color:#fff;font-weight:700;padding:14px 20px;border-radius:999px}
+.ft{color:#6d6d7b;font-size:13px;text-align:center;padding:30px 16px 50px}
+</style>
+</head>
+<body>
+<div class="wb" role="navigation" aria-label="Browser"><div class="nav"><button type="button" onclick="history.length>1?history.back():location.href='web.html'" aria-label="Back">←</button><button type="button" class="fwd" onclick="history.forward()" aria-label="Forward">→</button><a href="nxway.html" aria-label="Reload">↻</a></div><div class="url"><span class="lock">🔒</span><b>nxway.hornell.edu</b><span>/</span></div><div class="tabs"><a href="web.html"><span aria-hidden="true">🔎</span><span class="lbl">Ramble</span></a><a href="index.html"><img src="assets/img/hu-01_seal_paper.webp" alt=""><span class="lbl">hornell.edu</span></a></div></div>
+
+<header class="hd"><div class="in"><a class="wm" href="nxway.html"><span class="moon"></span>NX<b>WAY</b></a><a class="get" href="#app">Get the app</a></div></header>
+<section class="hero" style="border:0"><div class="in">
+  <div><h1>Get home.<br><b>It's free.</b></h1><p>Free late-night rides anywhere in Hornell, 8 p.m. to 3 a.m., driven by students who have seen absolutely everything.</p><span class="hours" id="hrs"><i></i><span id="hrt">Running now</span></span></div>
+  <div class="phone" id="app"><div class="bar"></div><div class="map" aria-label="Map"></div><h3>Estimated wait from Brewer Street</h3><div class="eta"><span id="eta">—</span> <small>min</small></div><p class="why" id="why"></p>
+    <button class="req" id="req">Call a Nxway</button><p class="q" id="q">You're #19 in line. Van 4 is on its way. Stay where you are. Drink some water.</p></div>
+</div></section>
+<section><div class="in"><h2>How it works</h2><div class="steps"><div class="step"><b>1</b><h3>Open the app</h3><p>Log in with your Hornell email. Yes, the same one Bleat uses. No, they don&#x27;t talk to each other.</p></div><div class="step"><b>2</b><h3>Pick up, drop off</h3><p>Anywhere in the Hornell city limits, plus Lot K on game days. Not Climax. We&#x27;ve been asked.</p></div><div class="step"><b>3</b><h3>Find the white van</h3><p>It&#x27;s white. It says NXWAY. It&#x27;s the only van on Brewer Street with its hazards on and a student driver staring at you.</p></div></div></div></section>
+<section><div class="in"><h2>Rules of the van</h2><div class="rules"><div>One rider, one seat. Laps are not seats.</div><div>No open containers. We can see it. It&#x27;s a red cup.</div><div>No food in the van. We know about the Dumpster Plate. We have all smelled the Dumpster Plate.</div><div>If you&#x27;re going to be sick, say “NXWAY” and we pull over. It&#x27;s the code word. Use it early.</div><div>The driver controls the music. After 2 a.m. the driver may, at their discretion, allow requests.</div><div>What happens in the van is reported to no one. Unless it&#x27;s a crime. Or extremely funny.</div></div></div></section>
+<section class="faq"><div class="in"><h2>Questions</h2><details><summary>How long is the wait?</summary><p>About 25 minutes on weekend nights. Longer after a home win, during Horn Week, and every Thursday when the Rut lets out at 1:30.</p></details><details><summary>Can I take a Nxway to a party?</summary><p>You can take a Nxway to an address. What happens at the address is between you and Hornell PD.</p></details><details><summary>Do drivers really see everything?</summary><p>Yes. They have a group chat. It&#x27;s the best group chat on campus, and you will never be in it.</p></details><details><summary>I left something in the van.</summary><p>Lost and found is at the HUPD front desk: phones, one shoe, IDs (real), IDs (fake, now on the Wall of Shame), and a single tiara.</p></details><details><summary>Can I drive?</summary><p>$17 an hour, nights only, clean license, a strong stomach. Training is one evening and a video from 2011.</p></details></div></section>
+<section><div class="in"><div class="drive"><div><h2>Drive with us.</h2><p>$17/hr · nights only · the best group chat on campus</p></div><a href="#">Apply to drive</a></div></div></section>
+<p class="ft">Nxway is a service of Hornell University Transportation and HUPD · “Call a Nxway” is how every night ends · <a href="web.html">Ramble</a></p>
+<script>
+(function(){
+  var n=new Date(),h=n.getHours(),d=n.getDay(),on=(h>=20||h<3),eta,why;
+  var wk=(d===4||d===5||d===6)&&(h>=22||h<3)||(d===0&&h<3)||(d===5||d===6)&&h<3;
+  if(!on){eta='—';why='Nxway runs 8 p.m. to 3 a.m. It is currently daytime. Walk. Ten minutes downhill, twenty back up.';document.getElementById('hrs').classList.add('off');document.getElementById('hrt').textContent='Opens at 8 p.m.';}
+  else if(wk){eta=25+Math.floor(Math.random()*17);why=(d===4?'The Rut lets out at 1:30. ':'')+'Weekend night. Every van is out. One of them is on Brewer Street for a reason we can’t discuss.';}
+  else{eta=6+Math.floor(Math.random()*9);why='Quiet night. The drivers are bored and will talk to you.';}
+  document.getElementById('eta').textContent=eta;document.getElementById('why').textContent=why;
+  document.getElementById('req').addEventListener('click',function(){var q=document.getElementById('q');q.style.display='block';if(!on)q.textContent='Nxway is closed. It is daytime. Please go to class.';});
+})();
+</script>
+</body>
+</html>

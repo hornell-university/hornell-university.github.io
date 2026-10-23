@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Bleat · East Hill</title>
+<meta name="description" content="Bleat: the anonymous app for Hornell University. Spill, Missed Connections, Marketplace and the Horn List.">
+<link rel="icon" href="assets/img/dg-01_bleat.webp">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,700;12..96,800&display=swap">
+<style>
+.wb{position:sticky;top:0;z-index:999;display:flex;align-items:center;gap:8px;height:42px;padding:0 max(10px,env(safe-area-inset-left,0px)) 0 max(10px,env(safe-area-inset-left,0px));
+ background:#dfe1e5;border-bottom:1px solid #c4c7cc;font:500 13px/1 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;color:#3c4043}
+.wb a,.wb button{color:inherit;text-decoration:none}
+.wb .nav{display:flex;gap:2px}
+.wb .nav a,.wb .nav button{display:inline-flex;align-items:center;justify-content:center;width:30px;height:30px;border-radius:50%;border:0;background:transparent;cursor:pointer;font-size:16px}
+.wb .nav a:hover,.wb .nav button:hover{background:#c8cbd0}
+.wb .url{flex:1;min-width:0;display:flex;align-items:center;gap:7px;height:30px;padding:0 12px;border-radius:15px;background:#fff;white-space:nowrap;overflow:hidden}
+.wb .url .lock{font-size:11px;color:#5f6368}
+.wb .url b{font-weight:600;color:#202124}
+.wb .url span{color:#80868b;overflow:hidden;text-overflow:ellipsis}
+.wb .tabs{display:flex;gap:6px}
+.wb .tabs a{display:inline-flex;align-items:center;gap:6px;height:30px;padding:0 10px;border-radius:15px;background:#eef0f2;font-weight:600;font-size:12px;white-space:nowrap}
+.wb .tabs a:hover{background:#fff}
+.wb .tabs img{width:16px;height:16px;border-radius:3px}
+@media (max-width:620px){.wb .fwd,.wb .tabs .lbl{display:none}.wb .tabs a{padding:0 8px}}
+
+
+:root{--red:#b3202b;--red2:#8f1821;--ink:#1d1a1c;--muted:#6d6669;--bg:#f4f0ee;--card:#fff;--rule:#e8e1de;--gold:#c99a2e;--pink:#ff4f9a}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.5 "Bricolage Grotesque",system-ui,sans-serif}
+img{display:block;max-width:100%}
+button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
+a{color:inherit}
+.top{position:sticky;top:42px;z-index:20;background:var(--red);color:#fff}
+.top .in{max-width:1180px;margin:0 auto;display:flex;align-items:center;gap:14px;padding:10px 16px}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none;font:800 26px/1 "Bricolage Grotesque",system-ui,sans-serif;letter-spacing:-.03em}
+.logo img{width:38px;height:38px;border-radius:10px;box-shadow:0 0 0 2px #fff}
+.search{flex:1;max-width:460px;margin-left:auto;display:flex;align-items:center;gap:8px;background:rgba(255,255,255,.16);border-radius:999px;padding:8px 14px;color:#ffe6e8}
+.search input{flex:1;min-width:0;background:none;border:0;color:#fff;font:inherit;outline:none}
+.search input::placeholder{color:#ffd2d6}
+.me{display:flex;align-items:center;gap:8px;font-weight:700;font-size:13px;white-space:nowrap}
+.me img{width:30px;height:30px;border-radius:50%;background:#fff}
+.tabs{background:var(--red2)}
+.tabs .in{max-width:1180px;margin:0 auto;display:flex;gap:4px;padding:0 10px;overflow-x:auto;scrollbar-width:none}
+.tabs button{color:#ffd9dc;font-weight:700;font-size:14px;padding:12px 14px;border-bottom:3px solid transparent;white-space:nowrap}
+.tabs button[aria-selected=true]{color:#fff;border-bottom-color:#fff}
+.tabs button .gg{color:#ffd76a}
+.wrap{max-width:1180px;margin:0 auto;padding:22px 16px 60px;display:grid;grid-template-columns:220px minmax(0,1fr) 300px;gap:22px;align-items:start}
+@media (max-width:1060px){.wrap{grid-template-columns:minmax(0,1fr) 300px}.left{display:none}}
+@media (max-width:760px){.wrap{grid-template-columns:minmax(0,1fr)}.me span{display:none}.search{display:none}}
+.panel{background:var(--card);border:1px solid var(--rule);border-radius:16px;padding:16px}
+.panel h3{margin:0 0 10px;font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.left .panel+.panel,.right .panel+.panel{margin-top:14px}
+.chan{display:block;padding:8px 10px;border-radius:10px;font-weight:600;text-decoration:none}
+.chan:hover{background:var(--bg)}
+.verified{font-size:13px;color:var(--muted)}
+.verified b{color:var(--ink)}
+.compose{display:flex;gap:10px;align-items:center;margin-bottom:14px}
+.compose img{width:40px;height:40px;border-radius:50%}
+.compose div{flex:1;background:var(--card);border:1px solid var(--rule);border-radius:999px;padding:11px 16px;color:var(--muted)}
+.view{display:none}.view.on{display:block}
+.post{display:flex;gap:12px;background:var(--card);border:1px solid var(--rule);border-radius:16px;padding:14px 16px;margin-bottom:10px}
+.vote{display:flex;flex-direction:column;align-items:center;gap:2px;min-width:38px;color:var(--muted);font-size:13px}
+.vote b{color:var(--ink);font-size:14px}
+.vote button{font-size:14px;color:#b9b1ae;padding:2px}
+.vote button:hover{color:var(--red)}
+.pb{min-width:0;flex:1}
+.meta{display:flex;align-items:center;gap:6px;flex-wrap:wrap;font-size:13px;color:var(--muted)}
+.meta img{width:24px;height:24px;border-radius:50%}
+.meta b{color:var(--ink)}
+.chip{font-style:normal;font-size:11.5px;font-weight:700;background:#fbe6e8;color:var(--red);padding:3px 9px;border-radius:999px;margin-left:auto}
+.post p{margin:8px 0 10px;font-size:16.5px;line-height:1.45}
+.acts{display:flex;gap:18px;font-size:13px;color:var(--muted)}
+.market{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:12px}
+.item{background:var(--card);border:1px solid var(--rule);border-radius:16px;padding:14px;display:flex;flex-direction:column;gap:8px}
+.item .row{display:flex;align-items:center;gap:8px}
+.item .row img{width:28px;height:28px;border-radius:50%}
+.item h4{margin:0;font-size:17px}
+.item .price{font-weight:800;color:var(--red);font-size:18px}
+.item.removed{opacity:.55}
+.item.removed .price{color:var(--muted);font-size:14px}
+.item p{margin:0;color:var(--muted);font-size:14px}
+.hl-head{background:linear-gradient(135deg,#1c1416,#3a1a1f);color:#fff;border-radius:18px;padding:20px;display:flex;gap:18px;align-items:center;margin-bottom:14px}
+.hl-head img{width:96px;flex:0 0 96px}
+.hl-head h2{margin:0;font-size:30px;letter-spacing:-.02em}
+.hl-head p{margin:4px 0 0;color:#e7c9cd}
+.rank{display:flex;gap:14px;align-items:center;background:var(--card);border:1px solid var(--rule);border-radius:14px;padding:12px 16px;margin-bottom:8px}
+.rank .n{flex:0 0 44px;font:800 26px/1 "Bricolage Grotesque",system-ui,sans-serif;color:var(--red);text-align:center}
+.rank.goat{background:linear-gradient(90deg,#fff8e6,#fff);border-color:#ecd59a}
+.rank.goat .n{color:var(--gold)}
+.rank .who{min-width:0;flex:1}
+.rank .who b{font-size:17px}
+.rank .who p{margin:2px 0 0;color:var(--muted);font-size:14px}
+.blur{filter:blur(.55px);text-shadow:0 0 1px rgba(0,0,0,.25)}
+.g{display:inline-block;margin-left:6px;background:var(--gold);color:#fff;font-weight:800;font-size:12px;width:20px;height:20px;line-height:20px;text-align:center;border-radius:50%;vertical-align:2px}
+.mv{font-size:12px;font-weight:800;padding:3px 8px;border-radius:999px;background:#f1ecea;color:var(--muted)}
+.mv.up{background:#e3f5e8;color:#1f8a43}.mv.down{background:#fbe6e8;color:var(--red)}.mv.new{background:#fff1c9;color:#9a6b00}
+details.more{background:var(--card);border:1px solid var(--rule);border-radius:14px;padding:12px 16px;margin:10px 0 18px}
+details.more summary{cursor:pointer;font-weight:700}
+details.more ol{margin:10px 0 0;padding-left:34px;columns:2;column-gap:28px;color:var(--muted)}
+details.more li{margin-bottom:4px}
+@media (max-width:600px){details.more ol{columns:1}}
+.pasture{background:#1c1416;color:#f3e7e9;border-radius:18px;padding:18px}
+.pasture h3{margin:0 0 4px;font-size:20px}
+.pasture .sub{color:#c7a8ad;font-size:13px;margin:0 0 12px}
+.pasture .c{display:flex;gap:10px;align-items:flex-start;padding:9px 0;border-top:1px solid #3a2a2e}
+.pasture .c img{width:26px;height:26px;border-radius:50%}
+.pasture .c.rm{color:#8d777b;font-style:italic}
+.count{text-align:center;padding:18px}
+.count .t{font:800 34px/1 "Bricolage Grotesque",system-ui,sans-serif;letter-spacing:-.02em;color:var(--red);font-variant-numeric:tabular-nums}
+.count p{margin:6px 0 0;color:var(--muted);font-size:13px}
+.tags{display:flex;flex-wrap:wrap;gap:6px}
+.tags span{background:var(--bg);border-radius:999px;padding:6px 10px;font-weight:600;font-size:13px}
+.rules ol{margin:0;padding-left:18px;font-size:14px;color:var(--muted)}
+.rules li{margin-bottom:6px}
+.rules s{color:var(--ink)}
+.foot{text-align:center;color:var(--muted);font-size:12.5px;padding:0 16px 40px}
+</style>
+</head>
+<body>
+<div class="wb" role="navigation" aria-label="Browser"><div class="nav"><button type="button" onclick="history.length>1?history.back():location.href='web.html'" aria-label="Back">←</button><button type="button" class="fwd" onclick="history.forward()" aria-label="Forward">→</button><a href="bleat.html" aria-label="Reload">↻</a></div><div class="url"><span class="lock">🔒</span><b>bleat.app</b><span>/eastHill#hot</span></div><div class="tabs"><a href="web.html"><span aria-hidden="true">🔎</span><span class="lbl">Ramble</span></a><a href="index.html"><img src="assets/img/hu-01_seal_paper.webp" alt=""><span class="lbl">hornell.edu</span></a></div></div>
+
+<header class="top"><div class="in">
+  <a class="logo" href="bleat.html"><img src="assets/img/dg-01_bleat.webp" alt="">Bleat</a>
+  <label class="search"><span aria-hidden="true">🔎</span><input type="search" placeholder="Search East Hill" aria-label="Search Bleat"></label>
+  <div class="me"><img src="assets/img/em-20.webp" alt=""><span>anon ram #4412</span></div>
+</div></header>
+<nav class="tabs" aria-label="Bleat sections"><div class="in" role="tablist">
+  <button role="tab" data-v="hot" aria-selected="true">🔥 Hot</button>
+  <button role="tab" data-v="spill" aria-selected="false">🍵 Spill</button>
+  <button role="tab" data-v="missed" aria-selected="false">💌 Missed Connections</button>
+  <button role="tab" data-v="market" aria-selected="false">🛒 Marketplace</button>
+  <button role="tab" data-v="list" aria-selected="false"><span class="gg">G</span> Horn List</button>
+</div></nav>
+<div class="wrap">
+  <aside class="left">
+    <div class="panel"><h3>You</h3><p class="verified"><b>anon ram #4412</b><br>verified · @hornell.edu<br>karma 1,206 · 3 posts deleted</p></div>
+    <div class="panel"><h3>Herds</h3>
+      <a class="chan" href="#">🏢 Long Johnsons</a><a class="chan" href="#">🏚 Brewer Street</a><a class="chan" href="#">🏛 Greek Row</a>
+      <a class="chan" href="#">🏒 Rams Hockey</a><a class="chan" href="#">🧪 Orgo Survivors</a><a class="chan" href="#">🐐 Shika Fan Club</a></div>
+  </aside>
+  <main>
+    <div class="compose"><img src="assets/img/em-20.webp" alt=""><div>What's happening on East Hill? Names will be blurred.</div></div>
+    <section class="view on" data-view="hot"><article class="post"><div class="vote"><button aria-label="Upvote">▲</button><b>377</b><button aria-label="Downvote">▼</button></div><div class="pb"><div class="meta"><img src="assets/img/em-08.webp" alt=""><b>anon</b><span>· Long Tower · 2h</span><i class="chip">Horn List</i></div><p>horn list drops sunday. the thirst traps started on WEDNESDAY this week</p><div class="acts"><span>💬 58</span><span>↪ share</span><span>📸 screenshot</span></div></div></article><article class="post"><div class="vote"><button aria-label="Upvote">▲</button><b>412</b><button aria-label="Downvote">▼</button></div><div class="pb"><div class="meta"><img src="assets/img/em-07.webp" alt=""><b>PSA Paul</b><span>· Hews 5 · 3h</span><i class="chip">PSA</i></div><p>PSA: the dryer ghost is back on Hews 5. It took my boxers AND my roommate&#x27;s. We know it&#x27;s not a ghost.</p><div class="acts"><span>💬 96</span><span>↪ share</span><span>📸 screenshot</span></div></div></article><article class="post"><div class="vote"><button aria-label="Upvote">▲</button><b>905</b><button aria-label="Downvote">▼</button></div><div class="pb"><div class="meta"><img src="assets/img/em-14.webp" alt=""><b>anon</b><span>· Kessler · 4h</span><i class="chip">Spill</i></div><p>Gruber isn&#x27;t curving it. Stop lighting candles at St. Riba&#x27;s. (I lit one.)</p><div class="acts"><span>💬 131</span><span>↪ share</span><span>📸 screenshot</span></div></div></article><article class="post"><div class="vote"><button aria-label="Upvote">▲</button><b>1.2k</b><button aria-label="Downvote">▼</button></div><div class="pb"><div class="meta"><img src="assets/img/em-12.webp" alt=""><b>anon</b><span>· Brewer St · 6h</span><i class="chip">Spill</i></div><p>brody haskins at sunny&#x27;s at 4am eating a dumpster plate alone. we don&#x27;t talk about it</p><div class="acts"><span>💬 240</span><span>↪ share</span><span>📸 screenshot</span></div></div></article><article class="post"><div class="vote"><button aria-label="Upvote">▲</button><b>688</b><button aria-label="Downvote">▼</button></div><div class="pb"><div class="meta"><img src="assets/img/em-03.webp" alt=""><b>anon</b><span>· Union · 7h</span><i class="chip">Spill</i></div><p>someone in the Lynx Den just told 80,000 people on stream that I “play like a Climax State freshman.” I was getting a Red Bull</p><div class="acts"><span>💬 73</span><span>↪ share</span><span>📸 screenshot</span></div></div></article><article class="post"><div class="vote"><button aria-label="Upvote">▲</button><b>2.1k</b><button aria-label="Downvote">▼</button></div><div class="pb"><div class="meta"><img src="assets/img/em-17.webp" alt=""><b>anon</b><span>· Ramsey Watch · 9h</span><i class="chip">Horn Week</i></div><p>climax got him in 2019 and 2023. not this year. tents go up monday</p><div class="acts"><span>💬 310</span><span>↪ share</span><span>📸 screenshot</span></div></div></article><article class="post"><div class="vote"><button aria-label="Upvote">▲</button><b>1.4k</b><button aria-label="Downvote">▼</button></div><div class="pb"><div class="meta"><img src="assets/img/em-05.webp" alt=""><b>anon</b><span>· Pulaski · 11h</span><i class="chip">Spill</i></div><p>the Literature of Desire waitlist is at 300 and the professor sits ON the desk. ON it. I&#x27;m switching majors</p><div class="acts"><span>💬 202</span><span>↪ share</span><span>📸 screenshot</span></div></div></article><article class="post"><div class="vote"><button aria-label="Upvote">▲</button><b>2.6k</b><button aria-label="Downvote">▼</button></div><div class="pb"><div class="meta"><img src="assets/img/em-10.webp" alt=""><b>anon</b><span>· Brewer St · 12h</span><i class="chip">Spill</i></div><p>Sovereign billed us $45 for “porch couch elevation.” it was on the roof for ONE night</p><div class="acts"><span>💬 388</span><span>↪ share</span><span>📸 screenshot</span></div></div></article><article class="post"><div class="vote"><button aria-label="Upvote">▲</button><b>3.0k</b><button aria-label="Downvote">▼</button></div><div class="pb"><div class="meta"><img src="assets/img/em-02.webp" alt=""><b>anon</b><span>· Kowalski · 1d</span><i class="chip">Spill</i></div><p>whoever threw the rubber fish that hit the Climax goalie in the face: you are a hero and also please come get your fish</p><div class="acts"><span>💬 164</span><span>↪ share</span><span>📸 screenshot</span></div></div></article></section>
+    <section class="view" data-view="spill"><article class="post"><div class="vote"><button aria-label="Upvote">▲</button><b>841</b><button aria-label="Downvote">▼</button></div><div class="pb"><div class="meta"><img src="assets/img/em-11.webp" alt=""><b>anon</b><span>· Greek Row · 1h</span><i class="chip">Spill</i></div><p>BRAT pledges were seen carrying a locked trunk into the house at 2am. it&#x27;s not the Book. it&#x27;s definitely the Book</p><div class="acts"><span>💬 190</span><span>↪ share</span><span>📸 screenshot</span></div></div></article><article class="post"><div class="vote"><button aria-label="Upvote">▲</button><b>1.1k</b><button aria-label="Downvote">▼</button></div><div class="pb"><div class="meta"><img src="assets/img/em-16.webp" alt=""><b>anon</b><span>· the Pit · 2h</span><i class="chip">Spill</i></div><p>couple went public in the Pit at 12:40 today. on a WEDNESDAY. the List isn&#x27;t till sunday, babe, pace yourself</p><div class="acts"><span>💬 144</span><span>↪ share</span><span>📸 screenshot</span></div></div></article><article class="post"><div class="vote"><button aria-label="Upvote">▲</button><b>566</b><button aria-label="Downvote">▼</button></div><div class="pb"><div class="meta"><img src="assets/img/em-19.webp" alt=""><b>anon</b><span>· Long Tower · 5h</span><i class="chip">Spill</i></div><p>my RA brought me soup when I had the flu and I&#x27;ve never felt so seen. also she knew I had the flu before I told anyone??</p><div class="acts"><span>💬 41</span><span>↪ share</span><span>📸 screenshot</span></div></div></article><article class="post"><div class="vote"><button aria-label="Upvote">▲</button><b>2.2k</b><button aria-label="Downvote">▼</button></div><div class="pb"><div class="meta"><img src="assets/img/em-06.webp" alt=""><b>anon</b><span>· Cockburn · 8h</span><i class="chip">Spill</i></div><p>nap girl moved ONE table to the left today and the whole reading room went quiet like a solar eclipse</p><div class="acts"><span>💬 97</span><span>↪ share</span><span>📸 screenshot</span></div></div></article><article class="post"><div class="vote"><button aria-label="Upvote">▲</button><b>1.7k</b><button aria-label="Downvote">▼</button></div><div class="pb"><div class="meta"><img src="assets/img/em-13.webp" alt=""><b>anon</b><span>· Embers · 10h</span><i class="chip">Spill</i></div><p>the girl doing the tunnel parties is giving out QR codes in the Pulaski bathroom again. third stall. you didn&#x27;t hear it from me</p><div class="acts"><span>💬 212</span><span>↪ share</span><span>📸 screenshot</span></div></div></article></section>
+    <section class="view" data-view="missed"><article class="post"><div class="vote"><button aria-label="Upvote">▲</button><b>730</b><button aria-label="Downvote">▼</button></div><div class="pb"><div class="meta"><img src="assets/img/em-04.webp" alt=""><b>anon</b><span>· Embers · 1h</span><i class="chip">Missed Connection</i></div><p>Emo Night, bathroom line, you did my eyeliner with your own pencil and said “wings are a commitment.” I never got your name. I still have the wings.</p><div class="acts"><span>💬 62</span><span>↪ share</span><span>📸 screenshot</span></div></div></article><article class="post"><div class="vote"><button aria-label="Upvote">▲</button><b>238</b><button aria-label="Downvote">▼</button></div><div class="pb"><div class="meta"><img src="assets/img/em-09.webp" alt=""><b>anon</b><span>· Cockburn · 3h</span><i class="chip">Missed Connection</i></div><p>to the guy in the green beanie who held the door at Cockburn: Dizzy has your dedication. listen thursday</p><div class="acts"><span>💬 19</span><span>↪ share</span><span>📸 screenshot</span></div></div></article><article class="post"><div class="vote"><button aria-label="Upvote">▲</button><b>1.3k</b><button aria-label="Downvote">▼</button></div><div class="pb"><div class="meta"><img src="assets/img/em-15.webp" alt=""><b>anon</b><span>· Nxway van #4 · 6h</span><i class="chip">Missed Connection</i></div><p>Nxway driver who played Taking Back Sunday at 2:50am and didn&#x27;t say a word when I cried. 5 stars. marry me</p><div class="acts"><span>💬 88</span><span>↪ share</span><span>📸 screenshot</span></div></div></article><article class="post"><div class="vote"><button aria-label="Upvote">▲</button><b>960</b><button aria-label="Downvote">▼</button></div><div class="pb"><div class="meta"><img src="assets/img/em-18.webp" alt=""><b>anon</b><span>· the Randy Ram · 1d</span><i class="chip">Missed Connection</i></div><p>you: trying a NJ license on Dee. me: watching it die in real time. her: “nice try, sweetheart.” drinks on me if you&#x27;re 21 by spring</p><div class="acts"><span>💬 77</span><span>↪ share</span><span>📸 screenshot</span></div></div></article><article class="post"><div class="vote"><button aria-label="Upvote">▲</button><b>1.8k</b><button aria-label="Downvote">▼</button></div><div class="pb"><div class="meta"><img src="assets/img/em-01.webp" alt=""><b>anon</b><span>· Long Tower laundry · 2d</span><i class="chip">Missed Connection</i></div><p>you folded my laundry while I was asleep on the dryer. that was either the nicest or the creepiest thing that has ever happened to me. please clarify</p><div class="acts"><span>💬 203</span><span>↪ share</span><span>📸 screenshot</span></div></div></article></section>
+    <section class="view" data-view="market"><div class="market"><div class="item"><div class="row"><img src="assets/img/em-07.webp" alt=""><span class="verified">anon · verified</span></div><h4>Meal swipes, Rowe</h4><div class="price">$6 each</div><p>selling 12, unlimited plan, I live off Gino&#x27;s anyway</p></div><div class="item"><div class="row"><img src="assets/img/em-20.webp" alt=""><span class="verified">anon · verified</span></div><h4>“Custom stationery”</h4><div class="price">DM for pricing</div><p>printing services. NJ and PA only. don&#x27;t ask about Ohio</p></div><div class="item"><div class="row"><img src="assets/img/em-10.webp" alt=""><span class="verified">anon · verified</span></div><h4>Futon, lightly roofed</h4><div class="price">FREE</div><p>you have to get it down from the roof of 410 Brewer yourself. Sovereign says by Friday</p></div><div class="item"><div class="row"><img src="assets/img/em-17.webp" alt=""><span class="verified">anon · verified</span></div><h4>Ramsey Watch tent, 4-person</h4><div class="price">$30 / night</div><p>includes 2 sleeping bags, a flask holder and plausible deniability</p></div><div class="item"><div class="row"><img src="assets/img/em-05.webp" alt=""><span class="verified">anon · verified</span></div><h4>HORNY U hoodie, old seal</h4><div class="price">$40 cash</div><p>the real bootleg, not the Climax knockoff. game days behind KEG&#x27;s tent</p></div><div class="item"><div class="row"><img src="assets/img/em-03.webp" alt=""><span class="verified">anon · verified</span></div><h4>Golden Horn student ticket</h4><div class="price">best offer</div><p>can&#x27;t go, my dad found my Bleat. section 104, the Herd</p></div><div class="item removed"><div class="row"><img src="assets/img/em-14.webp" alt=""><span class="verified">anon · verified</span></div><h4>Orgo prelim keys</h4><div class="price">removed by moderators</div><p>[this listing was removed for violating Bleat community guidelines]</p></div><div class="item"><div class="row"><img src="assets/img/em-11.webp" alt=""><span class="verified">anon · verified</span></div><h4>Sublet, Roundhouse Lofts</h4><div class="price">$2,400 / mo</div><p>spring semester, pool in the middle of the turntable, my dad&#x27;s paying anyway</p></div></div></section>
+    <section class="view" data-view="list" id="hornlist">
+      <div class="hl-head"><img src="assets/img/dg-02_goat-badge.webp" alt="The GOAT badge"><div><h2>The Horn List</h2><p>Week 6 · Sunday, Oct 18 · 14,212 verified votes</p><p>Names are blurred per community guidelines.</p></div></div>
+      <div class="rank goat"><div class="n">G</div><div class="who"><b class="blur">Nap Girl</b><span class=g>G</span><p>nobody knows her major. nobody knows her name. she has no idea.</p></div><span class="mv">=</span></div><div class="rank"><div class="n">2</div><div class="who"><b class="blur">Laney Price</b><p>nine weeks at #2. the campaign is in its villain era.</p></div><span class="mv">=</span></div><div class="rank"><div class="n">3</div><div class="who"><b class="blur">Brody Haskins</b><p>smiled at someone at Rowe. they&#x27;re still recovering.</p></div><span class="mv down">▼1</span></div><div class="rank"><div class="n">4</div><div class="who"><b class="blur">Avery Van Wyck</b><p>hasn&#x27;t posted in 9 days. somehow went up.</p></div><span class="mv up">▲2</span></div><div class="rank"><div class="n">5</div><div class="who"><b class="blur">Gianna Russo</b><p>scored twice, yelled at a ref, called him babe.</p></div><span class="mv down">▼1</span></div><div class="rank"><div class="n">6</div><div class="who"><b class="blur">Mathieu Bergeron</b><p>the goalie. forty rituals. zero girlfriends. we&#x27;ve tried.</p></div><span class="mv up">▲4</span></div><div class="rank"><div class="n">7</div><div class="who"><b class="blur">Jess Kowalczyk</b><p>played the last song at the Rut and 300 people kissed on cue.</p></div><span class="mv">=</span></div><div class="rank"><div class="n">8</div><div class="who"><b class="blur">Hadley Prescott</b><p>freshman-year Avery energy. we&#x27;re scared.</p></div><span class="mv new">NEW</span></div><div class="rank"><div class="n">9</div><div class="who"><b class="blur">Dex Ruiz</b><p>made everyone drink water at 1am. hottest thing a man has ever done.</p></div><span class="mv down">▼3</span></div><div class="rank"><div class="n">10</div><div class="who"><b class="blur">Annika Lindqvist</b><p>gold tooth. bet me a shootout. I lost. I&#x27;d lose again.</p></div><span class="mv up">▲5</span></div>
+      <details class="more"><summary>Show 11–100</summary><ol start="11"><li class="blur">Chad Burke III</li><li class="blur">Tamsin Cho</li><li class="blur">Javi Rosario</li><li class="blur">the Homecoming Prince</li><li class="blur">Lilith Lutz</li><li class="blur">Maddie Quinlan</li><li class="blur">the guy who caught the fish</li><li class="blur">Talia Feldman</li><li class="blur">DJ Dizzy</li><li class="blur">Teddy Abruzzo</li><li class="blur">the Morning Wood barista (Tuesdays only)</li><li class="blur">Casey from the garage (she&#x27;s not even a student)</li><li class="blur">Noor Haddad</li><li class="blur">Tour Guide Tiffany</li><li class="blur">Shirtless Tanner</li><li class="blur">the TA who grades Orgo</li><li class="blur">Proposal Pete</li></ol><p class="verified" style="margin:10px 0 0">…and 72 more. Fell off this week: <span class="blur">somebody</span>. The slideshow is up.</p></details>
+      <div class="pasture"><h3>🐑 The Pasture</h3><p class="sub">612 replies · removed by moderators twice this week · back again</p><div class="c"><img src="assets/img/em-16.webp" alt=""><span>Kevin Park got 212 votes and still missed. at this point the List is personal</span></div><div class="c"><img src="assets/img/em-02.webp" alt=""><span>Shirtless Tanner fell to 96. it&#x27;s October, Tanner. put a shirt on and focus</span></div><div class="c"><img src="assets/img/em-12.webp" alt=""><span>the Casey vote is townies brigading and honestly? respect</span></div><div class="c"><img src="assets/img/em-06.webp" alt=""><span>Kevin Park came 101st. ONE. HUNDRED. AND. FIRST.</span></div><div class="c rm"><img src="assets/img/em-19.webp" alt=""><span>[removed by moderators]</span></div><div class="c rm"><img src="assets/img/em-09.webp" alt=""><span>[removed by moderators]</span></div><div class="c"><img src="assets/img/em-03.webp" alt=""><span>mods delete this every week and every week it&#x27;s back. the Pasture is eternal</span></div></div>
+    </section>
+  </main>
+  <aside class="right">
+    <div class="panel count"><h3>Next Horn List drops in</h3><div class="t" id="cd">—</div><p>Voting closes Saturday 11:59 p.m. Campaigning is banned.<br>Campaigning is constant.</p></div>
+    <div class="panel"><h3>Trending on East Hill</h3><div class="tags"><span>#HornList</span><span>#RamseyWatch</span><span>#NapGirl</span><span>#DryerGhost</span><span>#ClimaxWeek</span><span>#TunnelParty</span><span>#Gruber</span><span>#PorchCouch</span></div></div>
+    <div class="panel rules"><h3>Community guidelines</h3><ol>
+      <li><s>Blur all names.</s> Please blur names.</li><li>No doxxing, no threats, no Climax State students.</li>
+      <li>PSA Paul is limited to one PSA per day. He is aware.</li><li>The Pasture is not allowed. We know.</li></ol></div>
+    <div class="panel"><h3>Elsewhere</h3><a class="chan" href="unfiltered.html">📸 @hornyu.unfiltered</a><a class="chan" href="dailyram.html">📰 The Daily Ram</a><a class="chan" href="whrn.html">📻 WHRN After Hours</a></div>
+  </aside>
+</div>
+<p class="foot">Bleat is not affiliated with Hornell University. Hornell University would like that on the record.</p>
+<script>
+(function(){
+  var tabs=[].slice.call(document.querySelectorAll('.tabs [data-v]')),views=[].slice.call(document.querySelectorAll('.view'));
+  var up=document.querySelector('.wb .url span:last-child');function show(v){if(up)up.textContent='/eastHill#'+v;tabs.forEach(function(t){t.setAttribute('aria-selected',t.dataset.v===v)});views.forEach(function(s){s.classList.toggle('on',s.dataset.view===v)});}
+  tabs.forEach(function(t){t.addEventListener('click',function(){show(t.dataset.v);try{history.replaceState(null,'','#'+t.dataset.v)}catch(e){}})});
+  var h=(location.hash||'').slice(1);if(h==='hornlist')h='list';if(h)show(h);
+  var el=document.getElementById('cd');
+  function tick(){var n=new Date(),t=new Date(n);t.setHours(24,0,0,0);while(t.getDay()!==1)t.setDate(t.getDate()+1);
+    var s=Math.max(0,Math.floor((t-n)/1000)),d=Math.floor(s/86400),hh=Math.floor(s%86400/3600),m=Math.floor(s%3600/60),ss=s%60;
+    el.textContent=(d?d+'d ':'')+String(hh).padStart(2,'0')+':'+String(m).padStart(2,'0')+':'+String(ss).padStart(2,'0');}
+  tick();setInterval(tick,1000);
+})();
+</script>
+</body>
+</html>

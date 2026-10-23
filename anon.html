@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>who, us?</title>
+<meta name="description" content="Alpha Nu Omicron Nu.">
+<link rel="icon" href="assets/img/gr-04_anon-banner.webp">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Syne:wght@700;800&display=swap">
+<style>
+.wb{position:sticky;top:0;z-index:999;display:flex;align-items:center;gap:8px;height:42px;padding:0 max(10px,env(safe-area-inset-left,0px)) 0 max(10px,env(safe-area-inset-left,0px));
+ background:#dfe1e5;border-bottom:1px solid #c4c7cc;font:500 13px/1 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;color:#3c4043}
+.wb a,.wb button{color:inherit;text-decoration:none}
+.wb .nav{display:flex;gap:2px}
+.wb .nav a,.wb .nav button{display:inline-flex;align-items:center;justify-content:center;width:30px;height:30px;border-radius:50%;border:0;background:transparent;cursor:pointer;font-size:16px}
+.wb .nav a:hover,.wb .nav button:hover{background:#c8cbd0}
+.wb .url{flex:1;min-width:0;display:flex;align-items:center;gap:7px;height:30px;padding:0 12px;border-radius:15px;background:#fff;white-space:nowrap;overflow:hidden}
+.wb .url .lock{font-size:11px;color:#5f6368}
+.wb .url b{font-weight:600;color:#202124}
+.wb .url span{color:#80868b;overflow:hidden;text-overflow:ellipsis}
+.wb .tabs{display:flex;gap:6px}
+.wb .tabs a{display:inline-flex;align-items:center;gap:6px;height:30px;padding:0 10px;border-radius:15px;background:#eef0f2;font-weight:600;font-size:12px;white-space:nowrap}
+.wb .tabs a:hover{background:#fff}
+.wb .tabs img{width:16px;height:16px;border-radius:3px}
+@media (max-width:620px){.wb .fwd,.wb .tabs .lbl{display:none}.wb .tabs a{padding:0 8px}}
+
+
+*{box-sizing:border-box}
+body{margin:0;min-height:100vh;background:#0a0a0a;color:#eaeaea;font:15px/1.6 "Space Mono",ui-monospace,monospace;overflow-x:hidden}
+.mural{position:fixed;inset:0;z-index:-1;background:conic-gradient(from 210deg at 30% 60%,#ff5f6d,#ffc371,#47e5bc,#5b8cff,#c86bff,#ff5f6d);filter:blur(70px) saturate(1.2);opacity:.25;animation:sp 30s linear infinite}
+@keyframes sp{to{filter:blur(70px) saturate(1.2) hue-rotate(360deg)}}
+.c{min-height:calc(100vh - 42px);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:40px 16px}
+.c img{width:110px;margin-bottom:20px;filter:grayscale(1) contrast(1.2)}
+h1{font:800 clamp(56px,14vw,160px)/.9 Syne,system-ui,sans-serif;margin:0;letter-spacing:-.04em}
+.q{margin:18px 0 30px;color:#9a9a9a}
+.lines{display:grid;gap:10px;max-width:520px;width:100%;text-align:left}
+.l{border:1px solid #2a2a2a;padding:12px 14px;cursor:pointer;background:rgba(10,10,10,.6);transition:border-color .2s}
+.l:hover{border-color:#eaeaea}
+.l span{display:none;color:#47e5bc}
+.l.on span{display:block;margin-top:6px}
+.ft{position:fixed;bottom:10px;left:0;right:0;text-align:center;font-size:11px;color:#555}
+.ft a{color:#777}
+</style>
+</head>
+<body>
+<div class="wb" role="navigation" aria-label="Browser"><div class="nav"><button type="button" onclick="history.length>1?history.back():location.href='web.html'" aria-label="Back">←</button><button type="button" class="fwd" onclick="history.forward()" aria-label="Forward">→</button><a href="anon.html" aria-label="Reload">↻</a></div><div class="url"><span class="lock">🔒</span><b>who.us</b><span>/</span></div><div class="tabs"><a href="web.html"><span aria-hidden="true">🔎</span><span class="lbl">Ramble</span></a><a href="index.html"><img src="assets/img/hu-01_seal_paper.webp" alt=""><span class="lbl">hornell.edu</span></a></div></div>
+<div class="mural" aria-hidden="true"></div>
+<main class="c"><img src="assets/img/gr-04_anon-banner.webp" alt="ANON banner"><h1>who, us?</h1><p class="q">ΑΝΟΝ · a greenhouse at the edge of the Row · co-ed · unlabeled</p>
+<div class="lines"><div class="l" tabindex="0">&gt; roster<span>not published. you&#x27;re a member if the house says you are.</span></div><div class="l" tabindex="0">&gt; rush<span>there is no rush. there is no pledging. you&#x27;ll know.</span></div><div class="l" tabindex="0">&gt; the masquerade<span>february. masks mandatory. names not given. phones checked at the door.</span></div><div class="l" tabindex="0">&gt; @hornyu.unfiltered<span>we neither confirm nor deny. we sell stickers about it. $3.</span></div><div class="l" tabindex="0">&gt; where we drink<span>KEG. where we eat: Simp Sunday. where we get in: wherever we want.</span></div><div class="l" tabindex="0">&gt; the murals<span>painted by whoever lived here that year. this year&#x27;s is not finished. it will never be finished.</span></div></div></main>
+<p class="ft">this page has no admin. <a href="web.html">ramble</a></p>
+<script>[].forEach.call(document.querySelectorAll('.l'),function(l){function t(){l.classList.toggle('on')}l.addEventListener('click',t);l.addEventListener('keydown',function(e){if(e.key==='Enter')t()})});</script>
+</body>
+</html>

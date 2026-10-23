@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Ramble! · Search East Hill</title>
+<meta name="description" content="Ramble: the search portal of the Hornell web.">
+<link rel="icon" href="assets/img/hu-04_horny-h.webp">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@600;800;900&family=Nunito+Sans:wght@400;600;700&display=swap">
+<style>
+.wb{position:sticky;top:0;z-index:999;display:flex;align-items:center;gap:8px;height:42px;padding:0 max(10px,env(safe-area-inset-left,0px)) 0 max(10px,env(safe-area-inset-left,0px));
+ background:#dfe1e5;border-bottom:1px solid #c4c7cc;font:500 13px/1 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;color:#3c4043}
+.wb a,.wb button{color:inherit;text-decoration:none}
+.wb .nav{display:flex;gap:2px}
+.wb .nav a,.wb .nav button{display:inline-flex;align-items:center;justify-content:center;width:30px;height:30px;border-radius:50%;border:0;background:transparent;cursor:pointer;font-size:16px}
+.wb .nav a:hover,.wb .nav button:hover{background:#c8cbd0}
+.wb .url{flex:1;min-width:0;display:flex;align-items:center;gap:7px;height:30px;padding:0 12px;border-radius:15px;background:#fff;white-space:nowrap;overflow:hidden}
+.wb .url .lock{font-size:11px;color:#5f6368}
+.wb .url b{font-weight:600;color:#202124}
+.wb .url span{color:#80868b;overflow:hidden;text-overflow:ellipsis}
+.wb .tabs{display:flex;gap:6px}
+.wb .tabs a{display:inline-flex;align-items:center;gap:6px;height:30px;padding:0 10px;border-radius:15px;background:#eef0f2;font-weight:600;font-size:12px;white-space:nowrap}
+.wb .tabs a:hover{background:#fff}
+.wb .tabs img{width:16px;height:16px;border-radius:3px}
+@media (max-width:620px){.wb .fwd,.wb .tabs .lbl{display:none}.wb .tabs a{padding:0 8px}}
+
+
+*{box-sizing:border-box}
+body{margin:0;background:#eef3f8;color:#1c2733;font:15px/1.5 "Nunito Sans",system-ui,sans-serif}
+a{color:#1557c0;text-decoration:none}a:hover{text-decoration:underline}
+img{display:block;max-width:100%}
+.hd{background:linear-gradient(180deg,#2b7de9,#1557c0);color:#fff;padding:34px 16px 64px;text-align:center;position:relative;overflow:hidden}
+.hd::after{content:"";position:absolute;left:-10%;right:-10%;bottom:-60px;height:120px;background:#eef3f8;border-radius:50%}
+.logo{font:900 clamp(46px,9vw,84px)/1 Nunito,sans-serif;letter-spacing:-.04em;display:inline-flex;align-items:baseline;gap:2px;text-shadow:0 4px 0 rgba(0,0,0,.15)}
+.logo .r{color:#ffd23f}.logo .bang{color:#ffd23f;transform:rotate(12deg);display:inline-block}
+.tag{margin:6px 0 22px;font-weight:700;color:#d6e6ff}
+form{max-width:640px;margin:0 auto;display:flex;background:#fff;border-radius:999px;padding:6px;box-shadow:0 10px 30px rgba(0,30,80,.25);position:relative;z-index:2}
+form input{flex:1;min-width:0;border:0;outline:none;font:600 17px/1 "Nunito Sans",system-ui,sans-serif;padding:12px 18px;color:#1c2733;background:none}
+form button{border:0;border-radius:999px;background:#ffd23f;color:#1c2733;font:900 16px/1 Nunito,system-ui,sans-serif;padding:0 22px;cursor:pointer}
+.wrap{max-width:1140px;margin:-26px auto 0;padding:0 16px 60px;display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:22px;position:relative;z-index:3}
+@media (max-width:860px){.wrap{grid-template-columns:minmax(0,1fr)}}
+.box{background:#fff;border-radius:16px;box-shadow:0 2px 0 #d6e0ea;padding:18px}
+.box h2{margin:0 0 12px;font:900 18px/1.2 Nunito,system-ui,sans-serif;color:#0f3f8c}
+.cats{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:14px}
+.cats button{border:0;background:#eef3f8;color:#1c2733;font:700 13px/1 "Nunito Sans",system-ui,sans-serif;padding:8px 12px;border-radius:999px;cursor:pointer}
+.cats button[aria-pressed=true]{background:#1557c0;color:#fff}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:12px}
+.site{display:flex;gap:12px;align-items:center;padding:12px;border:1px solid #e3eaf2;border-radius:14px;color:inherit;background:#fff;transition:transform .15s,box-shadow .15s}
+a.site:hover{text-decoration:none;transform:translateY(-2px);box-shadow:0 8px 20px rgba(0,40,100,.12)}
+.site .ic{flex:0 0 56px;width:56px;height:56px;border-radius:12px;background:#f3f6fa center/contain no-repeat;display:flex;align-items:center;justify-content:center;font:900 22px/1 Nunito,system-ui,sans-serif;color:#fff}
+.site b{display:block;font:800 16px/1.2 Nunito,system-ui,sans-serif;color:#1c2733}
+.site .d{display:block;font-size:12.5px;color:#2b8a3e;margin:2px 0 3px}
+.site small{display:block;color:#5b6b7b;font-size:13px;line-height:1.35}
+.site.soon{opacity:.55;filter:grayscale(.6)}
+.site.soon .d{color:#b0412e}
+.none{display:none;padding:18px;text-align:center;color:#5b6b7b}
+.side .box+.box{margin-top:16px}
+.wx{display:flex;align-items:center;gap:14px}
+.wx .t{font:900 44px/1 Nunito,system-ui,sans-serif;color:#0f3f8c}
+.wx p{margin:0;color:#5b6b7b;font-size:14px}
+.tr ol{margin:0;padding-left:22px}
+.tr li{margin-bottom:6px}
+.tr a{color:#1c2733}
+.nw a{display:block;padding:8px 0;border-top:1px solid #eef2f6;color:#1c2733;font-weight:700}
+.nw a span{display:block;font:800 11px/1 Nunito,system-ui,sans-serif;letter-spacing:.08em;text-transform:uppercase;color:#1557c0;margin-bottom:4px}
+.ft{text-align:center;color:#7b8a99;font-size:12.5px;padding:0 16px 40px}
+</style>
+</head>
+<body>
+
+<div class="wb" role="navigation" aria-label="Browser"><div class="nav"><button type="button" onclick="history.back()" aria-label="Back">←</button><button type="button" class="fwd" onclick="history.forward()" aria-label="Forward">→</button><a href="web.html" aria-label="Reload">↻</a></div>
+<div class="url"><span class="lock">🔒</span><b>ramble.com</b><span></span></div><div class="tabs"><a href="index.html"><img src="assets/img/hu-01_seal_paper.webp" alt=""><span class="lbl">hornell.edu</span></a></div></div>
+<header class="hd"><div class="logo">R<span class="r">a</span>mble<span class="bang">!</span></div><p class="tag">Search East Hill and beyond. 99% of results are about the Horn List.</p>
+<form role="search" onsubmit="return false"><input id="q" type="search" placeholder="Search the Hornell web" aria-label="Search" autocomplete="off"><button type="submit">Ramble!</button></form></header>
+<div class="wrap">
+  <main class="box"><h2>The Hornell web</h2>
+    <div class="cats" id="cats"><button type="button" data-c="All" aria-pressed="true">All</button><button type="button" data-c="Campus" aria-pressed="false">Campus</button><button type="button" data-c="Food" aria-pressed="false">Food</button><button type="button" data-c="Getting around" aria-pressed="false">Getting around</button><button type="button" data-c="Greek Row" aria-pressed="false">Greek Row</button><button type="button" data-c="Housing" aria-pressed="false">Housing</button><button type="button" data-c="News &amp; media" aria-pressed="false">News &amp; media</button><button type="button" data-c="Nightlife" aria-pressed="false">Nightlife</button><button type="button" data-c="Rivals" aria-pressed="false">Rivals</button><button type="button" data-c="Shopping" aria-pressed="false">Shopping</button><button type="button" data-c="Social" aria-pressed="false">Social</button><button type="button" data-c="Sports" aria-pressed="false">Sports</button></div>
+    <div class="grid" id="grid"><a class="site" href="index.html" data-cat="Campus" data-k="hornell university hornell.edu the official website. any person, any study. campus"><span class="ic" style="background-image:url(assets/img/hu-01_seal_paper.webp)"></span><span><b>Hornell University</b><span class="d">hornell.edu</span><small>The official website. Any person, any study.</small></span></a><a class="site" href="bleat.html" data-cat="Social" data-k="bleat bleat.app anonymous. hornell emails only. the horn list drops sunday at midnight. social"><span class="ic" style="background-image:url(assets/img/dg-01_bleat.webp)"></span><span><b>Bleat</b><span class="d">bleat.app</span><small>Anonymous. Hornell emails only. The Horn List drops Sunday at midnight.</small></span></a><a class="site" href="unfiltered.html" data-cat="Social" data-k="@hornyu.unfiltered insta.gram/hornyu.unfiltered 40k followers. submit your clips. we blur nothing. social"><span class="ic" style="background-image:url(assets/img/dg-03_unfiltered.webp)"></span><span><b>@hornyu.unfiltered</b><span class="d">insta.gram/hornyu.unfiltered</span><small>40k followers. Submit your clips. We blur nothing.</small></span></a><a class="site" href="dailyram.html" data-cat="News &amp; media" data-k="the daily ram thedailyram.com independent student newspaper since 1891. online daily, in print thursdays. news &amp; media"><span class="ic" style="background-image:url(assets/img/dg-05_daily-ram.webp)"></span><span><b>The Daily Ram</b><span class="d">thedailyram.com</span><small>Independent student newspaper since 1891. Online daily, in print Thursdays.</small></span></a><a class="site" href="whrn.html" data-cat="News &amp; media" data-k="whrn 88.7 fm “the horn” whrn.fm student radio. after hours with dj dizzy, thu–sat 1–4 a.m. news &amp; media"><span class="ic" style="background-image:url(assets/img/dg-04_whrn.webp)"></span><span><b>WHRN 88.7 FM “The Horn”</b><span class="d">whrn.fm</span><small>Student radio. After Hours with DJ Dizzy, Thu–Sat 1–4 a.m.</small></span></a><a class="site" href="sovereign.html" data-cat="Housing" data-k="sovereign property group sovereignpg.com premium student living on historic brewer street. housing"><span class="ic" style="background:#0c2340;color:#d4af37;font-size:16px">SPG</span><span><b>Sovereign Property Group</b><span class="d">sovereignpg.com</span><small>Premium student living on historic Brewer Street.</small></span></a><a class="site" href="nxway.html" data-cat="Getting around" data-k="nxway nxway.hornell.edu free late-night rides, 8 p.m. to 3 a.m. call a nxway. getting around"><span class="ic" style="background-image:url(assets/img/dg-07_nxway.webp)"></span><span><b>Nxway</b><span class="d">nxway.hornell.edu</span><small>Free late-night rides, 8 p.m. to 3 a.m. Call a Nxway.</small></span></a><a class="site" href="randyram.html" data-cat="Nightlife" data-k="the randy ram randyram.biz hornell&#x27;s favorite tavern since 1946. id required. no exceptions. nightlife"><span class="ic" style="background-image:url(assets/img/tw-02_randy-ram.webp)"></span><span><b>The Randy Ram</b><span class="d">randyram.biz</span><small>Hornell&#x27;s favorite tavern since 1946. ID REQUIRED. NO EXCEPTIONS.</small></span></a><a class="site" href="therut.html" data-cat="Nightlife" data-k="the rut therut.club college night thursdays. 18 to party, 21 to drink. nightlife"><span class="ic" style="background-image:url(assets/img/tw-03_the-rut.webp)"></span><span><b>The Rut</b><span class="d">therut.club</span><small>College Night Thursdays. 18 to party, 21 to drink.</small></span></a><a class="site" href="embers.html" data-cat="Nightlife" data-k="embers embers-engine3.com emo night in an old firehouse. engine co. 3. nightlife"><span class="ic" style="background-image:url(assets/img/tw-07_embers.webp)"></span><span><b>Embers</b><span class="d">embers-engine3.com</span><small>Emo Night in an old firehouse. ENGINE CO. 3.</small></span></a><a class="site" href="rendos.html" data-cat="Nightlife" data-k="rendo&#x27;s rendos.bar champagne lounge. dress code. the rival&#x27;s booth is taken. nightlife"><span class="ic" style="background:#0d0b09;color:#d9b56a;font-size:16px">R’s</span><span><b>Rendo&#x27;s</b><span class="d">rendos.bar</span><small>Champagne lounge. Dress code. The Rival&#x27;s Booth is taken.</small></span></a><a class="site" href="sunnys.html" data-cat="Food" data-k="sunny&#x27;s diner sunnysdiner.com open 24 hours. home of the dumpster plate. food"><span class="ic" style="background-image:url(assets/img/tw-05_sunnys-diner.webp)"></span><span><b>Sunny&#x27;s Diner</b><span class="d">sunnysdiner.com</span><small>Open 24 hours. Home of the Dumpster Plate.</small></span></a><a class="site" href="morningwood.html" data-cat="Food" data-k="morning wood café morningwood.cafe rise and grind. food"><span class="ic" style="background-image:url(assets/img/tw-01_morning-wood.webp)"></span><span><b>Morning Wood Café</b><span class="d">morningwood.cafe</span><small>Rise and grind.</small></span></a><a class="site" href="thornsnroses.html" data-cat="Shopping" data-k="thorns n&#x27; roses thornsnroses.ink tattoos &amp; piercing. walk-ins friday night. shopping"><span class="ic" style="background-image:url(assets/img/tw-04_thorns-roses.webp)"></span><span><b>Thorns n&#x27; Roses</b><span class="d">thornsnroses.ink</span><small>Tattoos &amp; piercing. Walk-ins Friday night.</small></span></a><a class="site" href="zenos.html" data-cat="Sports" data-k="zeno&#x27;s temple zenostemple.net basement gym under a tire shop. no bullies. sports"><span class="ic" style="background:#151515;color:#e23b2e;font-size:16px">ZT</span><span><b>Zeno&#x27;s Temple</b><span class="d">zenostemple.net</span><small>Basement gym under a tire shop. NO BULLIES.</small></span></a><a class="site" href="chad.html" data-cat="Greek Row" data-k="chi alpha delta staychad.org est. 1872. stay chad. greek row"><span class="ic" style="background-image:url(assets/img/gr-01_chad-banner.webp)"></span><span><b>Chi Alpha Delta</b><span class="d">staychad.org</span><small>Est. 1872. Stay CHAD.</small></span></a><a class="site" href="keg.html" data-cat="Greek Row" data-k="kappa epsilon gamma kegparty.house open parties friday &amp; saturday. drink water. greek row"><span class="ic" style="background-image:url(assets/img/gr-02_keg-banner.webp)"></span><span><b>Kappa Epsilon Gamma</b><span class="d">kegparty.house</span><small>Open parties Friday &amp; Saturday. Drink water.</small></span></a><a class="site" href="simp.html" data-cat="Greek Row" data-k="sigma iota mu pi simpsunday.org simp sunday brunch, 11 a.m. everyone welcome. greek row"><span class="ic" style="background-image:url(assets/img/gr-03_simp-banner.webp)"></span><span><b>Sigma Iota Mu Pi</b><span class="d">simpsunday.org</span><small>Simp Sunday brunch, 11 a.m. Everyone welcome.</small></span></a><a class="site" href="anon.html" data-cat="Greek Row" data-k="alpha nu omicron nu who.us who, us? greek row"><span class="ic" style="background-image:url(assets/img/gr-04_anon-banner.webp)"></span><span><b>Alpha Nu Omicron Nu</b><span class="d">who.us</span><small>Who, us?</small></span></a><a class="site" href="brat.html" data-cat="Greek Row" data-k="beta rho alpha tau betarho.org members only. greek row"><span class="ic" style="background-image:url(assets/img/gr-05_brat-banner.webp)"></span><span><b>Beta Rho Alpha Tau</b><span class="d">betarho.org</span><small>Members only.</small></span></a><a class="site" href="thot.html" data-cat="Greek Row" data-k="theta omicron tau thetao.com theta o!!! greek week champions. greek row"><span class="ic" style="background-image:url(assets/img/gr-06_thot-banner.webp)"></span><span><b>Theta Omicron Tau</b><span class="d">thetao.com</span><small>THETA O!!! Greek Week champions.</small></span></a><a class="site" href="goth.html" data-cat="Greek Row" data-k="gamma omicron theta geocities.ws/gothhornell ~*~ welcome to the coven ~*~ hallura sold out. greek row"><span class="ic" style="background-image:url(assets/img/gr-07_goth-banner.webp)"></span><span><b>Gamma Omicron Theta</b><span class="d">geocities.ws/gothhornell</span><small>~*~ welcome to the coven ~*~ Hallura sold out.</small></span></a><a class="site" href="climax.html" data-cat="Rivals" data-k="climax state university climaxstate.edu go cougars. (do not visit.) rivals"><span class="ic" style="background-image:url(assets/img/ev-01_climax-cougars.webp)"></span><span><b>Climax State University</b><span class="d">climaxstate.edu</span><small>Go Cougars. (Do not visit.)</small></span></a></div>
+    <p class="none" id="none">No results. Did you mean: <a href="bleat.html#list">Horn List</a>?</p>
+  </main>
+  <aside class="side">
+    <div class="box"><h2>East Hill weather</h2><div class="wx"><div class="t">54°</div><p>Overcast, wind off the gorge.<br>Ten minutes downhill, twenty back up.</p></div></div>
+    <div class="box tr"><h2>Trending searches</h2><ol><li><a href="#" data-q="how to get un-barbed">how to get un-barbed</a></li><li><a href="#" data-q="is the golden fleece real">is the golden fleece real</a></li><li><a href="#" data-q="nap girl name">nap girl name</a></li><li><a href="#" data-q="climax state transfer requirements">climax state transfer requirements</a></li><li><a href="#" data-q="purple paint remover bronze">purple paint remover bronze</a></li><li><a href="#" data-q="sovereign porch couch fee legal?">sovereign porch couch fee legal?</a></li><li><a href="#" data-q="gruber curve 2019">gruber curve 2019</a></li><li><a href="#" data-q="nxway wait time right now">nxway wait time right now</a></li><li><a href="#" data-q="does dee marchetti ever sleep">does dee marchetti ever sleep</a></li><li><a href="#" data-q="how to tell your RA you&#x27;re in love">how to tell your RA you&#x27;re in love</a></li></ol></div>
+    <div class="box nw"><h2>Ramble News</h2><a href="dailyram.html"><span>Daily Ram</span>Who runs @hornyu.unfiltered? The Ram narrows it down</a><a href="dailyram.html#blotter"><span>Daily Ram</span>HUPD blotter: a goat, a golf cart and a 3 a.m. bonfire</a><a href="bleat.html#list"><span>Bleat</span>Horn List week 6: Nap Girl holds, Laney Price stuck at #2</a><a href="whrn.html#dedicate"><span>WHRN</span>After Hours dedications are open for Thursday</a></div>
+  </aside>
+</div>
+<p class="ft">Ramble! © 2026 · Privacy · Terms · We are not reading your searches (we are).</p>
+<script>
+(function(){
+  var q=document.getElementById('q'),cards=[].slice.call(document.querySelectorAll('#grid .site')),none=document.getElementById('none'),cat='All';
+  function run(){var v=q.value.trim().toLowerCase(),n=0;cards.forEach(function(c){var ok=(cat==='All'||c.dataset.cat===cat)&&(!v||v.split(/\s+/).every(function(w){return c.dataset.k.indexOf(w)>=0}));c.style.display=ok?'':'none';if(ok)n++});none.style.display=n?'none':'block';}
+  q.addEventListener('input',run);
+  [].forEach.call(document.querySelectorAll('#cats button'),function(b){b.addEventListener('click',function(){cat=b.dataset.c;[].forEach.call(document.querySelectorAll('#cats button'),function(x){x.setAttribute('aria-pressed',x===b)});run();})});
+  [].forEach.call(document.querySelectorAll('[data-q]'),function(a){a.addEventListener('click',function(ev){ev.preventDefault();q.value=a.dataset.q;run();window.scrollTo({top:0,behavior:'smooth'})})});
+})();
+</script>
+</body>
+</html>

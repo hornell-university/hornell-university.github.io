@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Climax State University · Reach your peak</title>
+<meta name="description" content="Climax State University, Climax, Pennsylvania. Go Cougars.">
+<link rel="icon" href="assets/img/ev-01_climax-cougars.webp">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&family=Source+Sans+3:wght@400;600;700&display=swap">
+<style>
+.wb{position:sticky;top:0;z-index:999;display:flex;align-items:center;gap:8px;height:42px;padding:0 max(10px,env(safe-area-inset-left,0px)) 0 max(10px,env(safe-area-inset-left,0px));
+ background:#dfe1e5;border-bottom:1px solid #c4c7cc;font:500 13px/1 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;color:#3c4043}
+.wb a,.wb button{color:inherit;text-decoration:none}
+.wb .nav{display:flex;gap:2px}
+.wb .nav a,.wb .nav button{display:inline-flex;align-items:center;justify-content:center;width:30px;height:30px;border-radius:50%;border:0;background:transparent;cursor:pointer;font-size:16px}
+.wb .nav a:hover,.wb .nav button:hover{background:#c8cbd0}
+.wb .url{flex:1;min-width:0;display:flex;align-items:center;gap:7px;height:30px;padding:0 12px;border-radius:15px;background:#fff;white-space:nowrap;overflow:hidden}
+.wb .url .lock{font-size:11px;color:#5f6368}
+.wb .url b{font-weight:600;color:#202124}
+.wb .url span{color:#80868b;overflow:hidden;text-overflow:ellipsis}
+.wb .tabs{display:flex;gap:6px}
+.wb .tabs a{display:inline-flex;align-items:center;gap:6px;height:30px;padding:0 10px;border-radius:15px;background:#eef0f2;font-weight:600;font-size:12px;white-space:nowrap}
+.wb .tabs a:hover{background:#fff}
+.wb .tabs img{width:16px;height:16px;border-radius:3px}
+@media (max-width:620px){.wb .fwd,.wb .tabs .lbl{display:none}.wb .tabs a{padding:0 8px}}
+
+
+*{box-sizing:border-box}
+body{margin:0;background:#fff;color:#1d1430;font:17px/1.6 "Source Sans 3",system-ui,sans-serif}
+a{color:#5b2a86}
+img{display:block;max-width:100%}
+.in{max-width:1140px;margin:0 auto;padding:0 18px}
+.util{background:#2a0f45;color:#e9dcff;font-size:13px}
+.util .in{display:flex;gap:18px;justify-content:flex-end;padding-top:8px;padding-bottom:8px;flex-wrap:wrap}
+.hd{background:#5b2a86;color:#fff;border-bottom:6px solid #f2b705}
+.hd .in{display:flex;align-items:center;gap:14px;padding-top:14px;padding-bottom:14px;flex-wrap:wrap}
+.hd img{width:60px}
+.hd b{font:700 26px/1 Oswald,Impact,sans-serif;letter-spacing:.04em;text-transform:uppercase}
+.hd small{display:block;font:500 12px/1 Oswald,Impact,sans-serif;letter-spacing:.2em;color:#f2b705;margin-top:4px}
+.hd nav{margin-left:auto;display:flex;gap:18px;font:700 14px/1 "Source Sans 3",system-ui,sans-serif;text-transform:uppercase;letter-spacing:.06em}
+.hd nav a{color:#fff;text-decoration:none}
+@media (max-width:820px){.hd nav{display:none}}
+.hero{background:linear-gradient(120deg,#2a0f45,#5b2a86 60%,#7a3fb0);color:#fff;padding:70px 0}
+.hero h1{font:700 clamp(46px,8vw,96px)/.92 Oswald,Impact,sans-serif;text-transform:uppercase;margin:0;letter-spacing:.01em}
+.hero h1 span{color:#f2b705}
+.hero p{font-size:21px;max-width:46ch;color:#e9dcff;margin:16px 0 26px}
+.hero a{display:inline-block;background:#f2b705;color:#2a0f45;font:700 16px/1 "Source Sans 3",system-ui,sans-serif;text-decoration:none;padding:16px 22px;text-transform:uppercase;letter-spacing:.06em}
+.stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border-bottom:1px solid #e6def0}
+@media (max-width:760px){.stats{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.stats div{padding:26px 18px;border-right:1px solid #e6def0;text-align:center}
+.stats b{display:block;font:700 44px/1 Oswald,Impact,sans-serif;color:#5b2a86}
+section{padding:56px 0}
+h2{font:700 34px/1 Oswald,Impact,sans-serif;text-transform:uppercase;margin:0 0 22px;color:#2a0f45}
+.news{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:18px}
+.n{border-top:5px solid #f2b705;background:#f7f3fb;padding:18px}
+.n small{font:700 12px/1 "Source Sans 3",system-ui,sans-serif;letter-spacing:.12em;text-transform:uppercase;color:#5b2a86}
+.n h3{font:700 22px/1.15 Oswald,Impact,sans-serif;margin:8px 0}
+.n p{margin:0;color:#4c3f60;font-size:15.5px}
+.gh{display:grid;grid-template-columns:240px minmax(0,1fr);gap:30px;align-items:center;background:#2a0f45;color:#fff;padding:26px}
+@media (max-width:760px){.gh{grid-template-columns:1fr}}
+.gh h2{color:#f2b705}
+.gh p{color:#e9dcff}
+.gh .trophy{aspect-ratio:1;border:2px dashed #f2b705;display:grid;place-items:center;text-align:center;font:700 18px/1.3 Oswald,Impact,sans-serif;color:#f2b705;padding:16px}
+.ft{background:#1d1430;color:#a99bc0;font-size:13px}
+.ft .in{padding-top:26px;padding-bottom:40px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+</style>
+</head>
+<body>
+<div class="wb" role="navigation" aria-label="Browser"><div class="nav"><button type="button" onclick="history.length>1?history.back():location.href='web.html'" aria-label="Back">←</button><button type="button" class="fwd" onclick="history.forward()" aria-label="Forward">→</button><a href="climax.html" aria-label="Reload">↻</a></div><div class="url"><span class="lock">🔒</span><b>climaxstate.edu</b><span>/</span></div><div class="tabs"><a href="web.html"><span aria-hidden="true">🔎</span><span class="lbl">Ramble</span></a><a href="index.html"><img src="assets/img/hu-01_seal_paper.webp" alt=""><span class="lbl">hornell.edu</span></a></div></div>
+
+<div class="util"><div class="in"><a href="#" style="color:#e9dcff">Students</a><a href="#" style="color:#e9dcff">Faculty</a><a href="#" style="color:#e9dcff">Alumni</a><a href="#" style="color:#e9dcff">Give</a></div></div>
+<header class="hd"><div class="in"><img src="assets/img/ev-01_climax-cougars.webp" alt="Climax State Cougars"><div><b>Climax State University</b><small>Climax, Pennsylvania · since 1887</small></div>
+<nav><a href="#">Admissions</a><a href="#">Academics</a><a href="#">Athletics</a><a href="#">Campus Life</a></nav></div></header>
+<section class="hero"><div class="in"><h1>Reach your <span>peak.</span></h1><p>Forty-eight thousand Cougars. Three hundred twelve majors. One very large campus, two hours south of somewhere you've heard of.</p><a href="#">Apply now</a></div></section>
+<div class="stats in"><div><b>48,000</b>students</div><div><b>94%</b>acceptance rate</div><div><b>312</b>majors</div><div><b>2</b>times we got Ramsey (2019, 2023)</div></div>
+<section><div class="in"><h2>Cougar news</h2><div class="news"><article class="n"><small>Athletics</small><h3>Cougars travel to Hornell for the Golden Horn game</h3><p>The Golden Horn has spent recent years in Hornell. We are confident it is only visiting.</p></article><article class="n"><small>Campus</small><h3>A reminder about respectful language</h3><p>Climax State is a proud R1 university of 48,000 students. It is not, and has never been, a “mattress factory.”</p></article><article class="n"><small>Student Life</small><h3>Purple paint is not a school supply</h3><p>The Dean of Students reminds Cougars traveling for Horn Week that bronze statues belonging to other institutions are not art projects.</p></article><article class="n"><small>Admissions</small><h3>Climax State named a “best value” for the ninth year</h3><p>Come for the value. Stay for the community. Leave with a degree.</p></article></div></div></section>
+<section style="padding-top:0"><div class="in gh"><div class="trophy">THE GOLDEN HORN<br><br>currently on loan to another institution</div>
+<div><h2>The Golden Horn</h2><p>Since 1904, Climax State and Hornell University have played for a ram's horn mounted on a gold-plated base. The game is played the Saturday before Thanksgiving and alternates campuses.</p>
+<p>Climax State does not endorse any chant, slogan, banner or T-shirt referencing our name, including but not limited to the one that has been banned from stadium screens since 2011.</p><p style="color:#f2b705;font-weight:700">Go Cougars. Stay purple.</p></div></div></section>
+<footer class="ft"><div class="in"><span>© 2026 Climax State University · Climax, PA · an equal opportunity institution</span><span><a href="web.html" style="color:#f2b705">Ramble</a> · Hornell students: please stop visiting this page</span></div></footer>
+</body>
+</html>

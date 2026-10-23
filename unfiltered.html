@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>@hornyu.unfiltered • Photos and videos</title>
+<meta name="description" content="Hornell, unfiltered. DM to submit.">
+<link rel="icon" href="assets/img/dg-03_unfiltered.webp">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Anton&display=swap">
+<style>
+.wb{position:sticky;top:0;z-index:999;display:flex;align-items:center;gap:8px;height:42px;padding:0 max(10px,env(safe-area-inset-left,0px)) 0 max(10px,env(safe-area-inset-left,0px));
+ background:#dfe1e5;border-bottom:1px solid #c4c7cc;font:500 13px/1 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;color:#3c4043}
+.wb a,.wb button{color:inherit;text-decoration:none}
+.wb .nav{display:flex;gap:2px}
+.wb .nav a,.wb .nav button{display:inline-flex;align-items:center;justify-content:center;width:30px;height:30px;border-radius:50%;border:0;background:transparent;cursor:pointer;font-size:16px}
+.wb .nav a:hover,.wb .nav button:hover{background:#c8cbd0}
+.wb .url{flex:1;min-width:0;display:flex;align-items:center;gap:7px;height:30px;padding:0 12px;border-radius:15px;background:#fff;white-space:nowrap;overflow:hidden}
+.wb .url .lock{font-size:11px;color:#5f6368}
+.wb .url b{font-weight:600;color:#202124}
+.wb .url span{color:#80868b;overflow:hidden;text-overflow:ellipsis}
+.wb .tabs{display:flex;gap:6px}
+.wb .tabs a{display:inline-flex;align-items:center;gap:6px;height:30px;padding:0 10px;border-radius:15px;background:#eef0f2;font-weight:600;font-size:12px;white-space:nowrap}
+.wb .tabs a:hover{background:#fff}
+.wb .tabs img{width:16px;height:16px;border-radius:3px}
+@media (max-width:620px){.wb .fwd,.wb .tabs .lbl{display:none}.wb .tabs a{padding:0 8px}}
+
+
+*{box-sizing:border-box}
+body{margin:0;background:#fff;color:#0f0f0f;font:14px/1.45 Inter,system-ui,sans-serif}
+a{color:inherit;text-decoration:none}
+img{display:block;max-width:100%}
+.ig{border-bottom:1px solid #dbdbdb;background:#fff;position:sticky;top:42px;z-index:20}
+.ig .in{max-width:935px;margin:0 auto;padding:10px 16px;display:flex;align-items:center;gap:14px}
+.ig .wm{font:italic 800 26px/1 Inter,system-ui,sans-serif;letter-spacing:-.04em}
+.ig .wm span{background:linear-gradient(45deg,#f9a03f,#e1306c,#833ab4);-webkit-background-clip:text;background-clip:text;color:transparent}
+.ig .s{margin-left:auto;background:#efefef;border-radius:8px;padding:8px 14px;color:#8e8e8e;min-width:0;width:240px}
+@media (max-width:600px){.ig .s{display:none}}
+.wrap{max-width:935px;margin:0 auto;padding:28px 16px 60px}
+.prof{display:flex;gap:clamp(18px,6vw,80px);align-items:center;padding:0 0 26px 0}
+.av{flex:0 0 auto;width:clamp(86px,18vw,150px);aspect-ratio:1;border-radius:50%;padding:4px;background:linear-gradient(45deg,#f9a03f,#e1306c,#833ab4)}
+.av img{width:100%;height:100%;border-radius:50%;border:4px solid #fff;background:#fff}
+.who h1{font:400 22px/1.2 Inter,system-ui,sans-serif;margin:0;display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.btns{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0}
+.who{min-width:0}
+.btns span{background:#0095f6;color:#fff;font-weight:700;padding:7px 18px;border-radius:8px}
+.btns span.alt{background:#efefef;color:#0f0f0f}
+.st{display:flex;flex-wrap:wrap;gap:6px 20px;margin:4px 0 12px;font-size:15px}
+.st b{font-weight:700}
+.bio{font-size:14.5px;white-space:pre-line}
+.bio a{color:#00376b;font-weight:600}
+.hl{display:flex;gap:22px;overflow-x:auto;padding:4px 0 26px;border-bottom:1px solid #dbdbdb;scrollbar-width:none}
+.hl div{text-align:center;font-size:12px;font-weight:600;flex:0 0 auto}
+.hl img{width:72px;height:72px;border-radius:50%;object-fit:cover;border:1px solid #dbdbdb;padding:3px;background:#fff;margin:0 auto 6px}
+.tabs{display:flex;justify-content:center;gap:clamp(20px,6vw,50px);font:700 12px/1 Inter,system-ui,sans-serif;letter-spacing:.1em;color:#8e8e8e;margin-bottom:4px}
+.tabs span{padding:16px 0;border-top:1px solid transparent;margin-top:-1px}
+.tabs span.on{color:#0f0f0f;border-top-color:#0f0f0f}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:4px}
+.tile{position:relative;aspect-ratio:1;overflow:hidden;background:#111;cursor:pointer;border:0;padding:0}
+.tile img{width:100%;height:100%;object-fit:cover}
+.tile .tx{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;padding:10%;text-align:center;color:#fff;font:400 clamp(13px,2.6vw,26px)/1.1 Anton,Impact,sans-serif;text-transform:uppercase;white-space:pre-line}
+.tile .ov{position:absolute;inset:0;background:rgba(0,0,0,.35);opacity:0;display:flex;align-items:center;justify-content:center;gap:18px;color:#fff;font-weight:800;font-size:16px;transition:opacity .15s}
+.tile .tx.long{font-size:clamp(11px,1.7vw,17px);line-height:1.15}
+.tile:hover .ov,.tile:focus-visible .ov{opacity:1}
+.dlg{position:fixed;inset:0;background:rgba(0,0,0,.72);display:none;align-items:center;justify-content:center;padding:20px;z-index:1000}
+.dlg.on{display:flex}
+.box{background:#fff;max-width:900px;width:100%;max-height:90vh;display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);border-radius:6px;overflow:hidden}
+@media (max-width:700px){.box{grid-template-columns:1fr;overflow:auto}}
+.box .m{background:#111;min-height:300px;position:relative}
+.box .m img{width:100%;height:100%;object-fit:cover;max-height:90vh}
+.box .m .tx{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;padding:10%;text-align:center;color:#fff;font:400 clamp(20px,3vw,32px)/1.12 Anton,Impact,sans-serif;text-transform:uppercase;white-space:pre-line}
+.box .c{display:flex;flex-direction:column;min-height:0}
+.box .h{display:flex;align-items:center;gap:10px;padding:12px 14px;border-bottom:1px solid #efefef;font-weight:700}
+.box .h img{width:32px;height:32px;border-radius:50%}
+.box .cm{padding:12px 14px;overflow:auto;flex:1}
+.box .cm p{margin:0 0 12px}
+.box .cm b{margin-right:6px}
+.box .ft{border-top:1px solid #efefef;padding:12px 14px;font-weight:700}
+.x{position:absolute;top:14px;right:18px;color:#fff;font-size:32px;background:none;border:0;cursor:pointer}
+.note{margin-top:26px;text-align:center;color:#8e8e8e;font-size:12.5px}
+</style>
+</head>
+<body>
+<div class="wb" role="navigation" aria-label="Browser"><div class="nav"><button type="button" onclick="history.length>1?history.back():location.href='web.html'" aria-label="Back">←</button><button type="button" class="fwd" onclick="history.forward()" aria-label="Forward">→</button><a href="unfiltered.html" aria-label="Reload">↻</a></div><div class="url"><span class="lock">🔒</span><b>insta.gram/hornyu.unfiltered</b><span>/hornyu.unfiltered/</span></div><div class="tabs"><a href="web.html"><span aria-hidden="true">🔎</span><span class="lbl">Ramble</span></a><a href="index.html"><img src="assets/img/hu-01_seal_paper.webp" alt=""><span class="lbl">hornell.edu</span></a></div></div>
+
+<header class="ig"><div class="in"><a class="wm" href="unfiltered.html"><span>Insta</span>gram</a><div class="s">Search</div></div></header>
+<main class="wrap">
+  <section class="prof">
+    <div class="av"><img src="assets/img/dg-03_unfiltered.webp" alt="@hornyu.unfiltered"></div>
+    <div class="who"><h1>hornyu.unfiltered</h1>
+      <div class="btns"><span>Follow</span><span class="alt">Message</span><span class="alt">Submit a clip</span></div>
+      <div class="st"><span><b>212</b> posts</span><span><b>40.2k</b> followers</span><span><b>0</b> following</span></div>
+      <p class="bio"><b>Hornell, unfiltered 🐏</b>
+East Hill's least official account. DM to submit. we blur nothing.
+not affiliated with Hornell University (they've written to us about it. three times)
+<a href="bleat.html#list">horn list recaps every monday ↓</a></p></div>
+  </section>
+  <div class="hl"><div><img src="assets/img/dg-02_goat-badge.webp" alt="">Horn List</div><div><img src="assets/img/st-10.webp" alt="">Fell Off</div><div><img src="assets/img/ev-01_climax-cougars.webp" alt="">Climax</div><div><img src="assets/img/em-10.webp" alt="">Brewer</div><div><img src="assets/img/em-14.webp" alt="">Receipts</div><div><img src="assets/img/ev-09_shika.webp" alt="">Shika</div></div>
+  <div class="tabs"><span class="on">▦ POSTS</span><span>▷ REELS</span><span>⊙ TAGGED</span></div>
+  <div class="grid"><button class="tile" data-i="0" aria-label="Open post"><div class="tx" style="background:#a3222b">WHO LEFT THE WHITE PARTY WITH WHO 👀</div><span class="ov">♥ 6,211   💬 122</span></button><button class="tile" data-i="1" aria-label="Open post"><img src="assets/img/tw-03_the-rut.webp" alt="" loading="lazy"><span class="ov">♥ 4,880   💬 122</span></button><button class="tile" data-i="2" aria-label="Open post"><img src="assets/img/hu-07_laundry-sign.webp" alt="" loading="lazy"><span class="ov">♥ 9,102   💬 122</span></button><button class="tile" data-i="3" aria-label="Open post"><div class="tx" style="background:#16151a">FELL OFF THE HORN LIST:
+██████ █████</div><span class="ov">♥ 12.4k   💬 122</span></button><button class="tile" data-i="4" aria-label="Open post"><img src="assets/img/ev-04_ramsey-watch.webp" alt="" loading="lazy"><span class="ov">♥ 7,330   💬 122</span></button><button class="tile" data-i="5" aria-label="Open post"><img src="assets/img/gr-09_golden-fleece.webp" alt="" loading="lazy"><span class="ov">♥ 15.9k   💬 122</span></button><button class="tile" data-i="6" aria-label="Open post"><div class="tx long" style="background:#ff4f9a">“I&#x27;m not even trying to be on the list”
+— someone posting a thirst trap at 11:58 p.m. saturday</div><span class="ov">♥ 8,040   💬 122</span></button><button class="tile" data-i="7" aria-label="Open post"><img src="assets/img/tw-07_embers.webp" alt="" loading="lazy"><span class="ov">♥ 5,512   💬 122</span></button><button class="tile" data-i="8" aria-label="Open post"><img src="assets/img/cl-07_ramsey-sign.webp" alt="" loading="lazy"><span class="ov">♥ 3,906   💬 122</span></button><button class="tile" data-i="9" aria-label="Open post"><div class="tx" style="background:#3b2a7a">CAUGHT ON STREAM:
+“plays like a Climax State freshman”</div><span class="ov">♥ 10.2k   💬 122</span></button><button class="tile" data-i="10" aria-label="Open post"><img src="assets/img/tw-05_sunnys-diner.webp" alt="" loading="lazy"><span class="ov">♥ 18.7k   💬 122</span></button><button class="tile" data-i="11" aria-label="Open post"><img src="assets/img/cl-06_car-wash.webp" alt="" loading="lazy"><span class="ov">♥ 11.3k   💬 122</span></button></div>
+  <p class="note">This account has received 3 cease-and-desist letters. They are pinned in our highlights.</p>
+</main>
+<div class="dlg" id="dlg" role="dialog" aria-modal="true"><button class="x" id="x" aria-label="Close">×</button><div class="box"><div class="m" id="dm"></div>
+<div class="c"><div class="h"><img src="assets/img/dg-03_unfiltered.webp" alt="">hornyu.unfiltered</div><div class="cm" id="dc"></div><div class="ft" id="dl"></div></div></div></div>
+<script>
+(function(){
+  var P=[{"k": "txt", "s": "WHO LEFT THE WHITE PARTY WITH WHO \ud83d\udc40", "bg": "#a3222b", "cap": "swipe for receipts. (there is no swipe. you know who you are.)", "likes": "6,211", "com": [["ram_4412", "the way I gasped"], ["brat.alum.99", "delete this"], ["hornell.official", "Please refer to the Student Code of Conduct, section 4."]]}, {"k": "img", "s": "tw-03_the-rut", "bg": null, "cap": "College Night at the Rut, 12:58 a.m. the line is now longer than the club", "likes": "4,880", "com": [["bigmike.rut", "ID."], ["jesskowalczyk", "last song is a banger, stay"], ["anon_ram", "I've been in this line since tuesday"]]}, {"k": "img", "s": "hu-07_laundry-sign", "bg": null, "cap": "the dryer ghost strikes Hews 5 again. someone over six feet is stealing boxers and the laundry room knows", "likes": "9,102", "com": [["psa.paul", "PSA: I said this on Bleat first"], ["hews5", "it's not a ghost. it's never been a ghost"], ["tall_guy_hews", "not me"]]}, {"k": "txt", "s": "FELL OFF THE HORN LIST:\n\u2588\u2588\u2588\u2588\u2588\u2588 \u2588\u2588\u2588\u2588\u2588", "bg": "#16151a", "cap": "a moment of silence. slideshow in stories", "likes": "12.4k", "com": [["pasture.archive", "rip bozo"], ["ram_7781", "she'll be back next week trust"], ["nap.girl.fan", "nap girl stays winning"]]}, {"k": "img", "s": "ev-04_ramsey-watch", "bg": null, "cap": "Ramsey Watch tents go up Monday. climax got him in 2019 and 2023. post your shift schedule and we'll post who's in which sleeping bag", "likes": "7,330", "com": [["sga.hornell", "Please sign up through SGA."], ["climax.cougars.fan", "\ud83d\udfe3\ud83d\udfe3\ud83d\udfe3"], ["rams.herd", "blocked and reported"]]}, {"k": "img", "s": "gr-09_golden-fleece", "bg": null, "cap": "a GOLD SHEEPSKIN on a Brewer Street doorstep. in OCTOBER. the fleece is either real or someone is very committed to a bit", "likes": "15.9k", "com": [["dailyram", "We'd like to talk to the resident. DM us."], ["oz.brennan", "oh this happened in 2021 too"], ["anon_ram", "oz how do you know everything"]]}, {"k": "txt", "s": "\u201cI'm not even trying to be on the list\u201d\n\u2014 someone posting a thirst trap at 11:58 p.m. saturday", "bg": "#ff4f9a", "cap": "every single week", "likes": "8,040", "com": [["laney.price", "this isn't about me"], ["ram_2210", "it's a little about you"], ["hadley.p", "\ud83e\udd0d"]]}, {"k": "img", "s": "tw-07_embers", "bg": null, "cap": "Emo Night at Embers. DJ Dizzy played Taking Back Sunday and a whole row of CHAD brothers cried in their polos", "likes": "5,512", "com": [["djdizzy", "this is a safe space"], ["chad.hornell", "fake news"], ["embers.hornell", "Thursdays 10pm \ud83d\udda4"]]}, {"k": "img", "s": "cl-07_ramsey-sign", "bg": null, "cap": "Ramsey after the first snow. still undefeated. still bronze. purple paint remover is $14 at Corner Mart, just saying", "likes": "3,906", "com": [["cornermart.hornell", "we're out"], ["anon_ram", "they bought it all already??"], ["petrucci.not.a.cop", "noted."]]}, {"k": "txt", "s": "CAUGHT ON STREAM:\n\u201cplays like a Climax State freshman\u201d", "bg": "#3b2a7a", "cap": "a Valorant streamer told 80k viewers that someone \u201cplays like a Climax State freshman.\u201d the someone was getting a Red Bull. clip in stories. we didn't choose violence, the Lynx Den did", "likes": "10.2k", "com": [["tamsin.tv", "he deserved it"], ["redbull_victim", "I WASN'T EVEN PLAYING"], ["battering.rams", "no comment"]]}, {"k": "img", "s": "tw-05_sunnys-diner", "bg": null, "cap": "Sunny's, 4:02 a.m. a starting quarterback is eating a dumpster plate alone. we will not be posting the photo. this is the photo", "likes": "18.7k", "com": [["sunnys.diner", "we feed everybody"], ["brody_7", "\ud83d\ude10"], ["ram_0042", "protect him at all costs"]]}, {"k": "img", "s": "cl-06_car-wash", "bg": null, "cap": "THOT car wash raised $4,100 for the food bank and three campus cops \u201cjust happened to drive by\u201d twice", "likes": "11.3k", "com": [["thot.hornell", "for CHARITY"], ["hupd.official", "Routine patrol."], ["gianna.r", "\ud83e\uddfd\ud83e\uddfd"]]}],d=document.getElementById('dlg'),dm=document.getElementById('dm'),dc=document.getElementById('dc'),dl=document.getElementById('dl');
+  function esc(s){return String(s).replace(/[&<>"]/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})}
+  [].forEach.call(document.querySelectorAll('.tile'),function(t){t.addEventListener('click',function(){
+    var p=P[+t.dataset.i];
+    dm.innerHTML=p.k==='img'?'<img src="assets/img/'+p.s+'.webp" alt="">':'<div class="tx" style="background:'+p.bg+'">'+esc(p.s)+'</div>';
+    dc.innerHTML='<p><b>hornyu.unfiltered</b>'+esc(p.cap)+'</p>'+p.com.map(function(c){return '<p><b>'+esc(c[0])+'</b>'+esc(c[1])+'</p>'}).join('');
+    dl.textContent='♥ '+p.likes+' likes';d.classList.add('on');})});
+  function close(){d.classList.remove('on')}
+  document.getElementById('x').addEventListener('click',close);
+  d.addEventListener('click',function(ev){if(ev.target===d)close()});
+  document.addEventListener('keydown',function(ev){if(ev.key==='Escape')close()});
+})();
+</script>
+</body>
+</html>
